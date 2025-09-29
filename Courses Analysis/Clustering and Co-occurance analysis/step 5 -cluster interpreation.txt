@@ -1,0 +1,113 @@
+# ================================================
+# 3) Cluster interpretation
+# - Size, % total
+# - Top 15 terms per cluster (by centroid weights)
+# - Auto-derived short labels based on keywords
+# - 2D SVD scatter colored by cluster
+# - Export cluster assignments CSV
+# ================================================
+
+def top_terms_per_cluster(model, feature_names: np.ndarray, top_n=15):
+    centers = model.cluster_centers_
+    tops = []
+    for ci, centroid in enumerate(centers):
+        idx = np.argsort(centroid)[::-1][:top_n]
+        terms = feature_names[idx]
+        weights = centroid[idx]
+        tops.append((ci, list(zip(terms, weights))))
+    return tops
+
+def autolabel_from_terms(terms):
+    # Simple heuristic mapping
+    keymap = {
+        "rag": "RAG & Grounding",
+        "retrieval": "RAG & Grounding",
+        "chain of thought": "CoT & Reasoning",
+        "chain-of-thought": "CoT & Reasoning",
+        "few shot": "Few-shot",
+        "few-shot": "Few-shot",
+        "prompt tuning": "Prompt Tuning",
+        "tuning": "Prompt Tuning",
+        "evaluation": "Eval/Debugging",
+        "debug": "Eval/Debugging",
+        "refinement": "Fundamentals & Design",
+        "prompt design": "Fundamentals & Design",
+        "design": "Fundamentals & Design",
+        "agent": "Agents/Tool Use",
+        "tool": "Agents/Tool Use",
+        "security": "Security",
+        "in context": "In-Context Learning",
+        "in-context": "In-Context Learning",
+        "optimization": "Optimization"
+    }
+    label_votes = []
+    for t, _w in terms:
+        for key, lbl in keymap.items():
+            if key in t:
+                label_votes.append(lbl)
+    if not label_votes:
+        # Fallback: join first 3 terms
+        return " / ".join([t for t, _ in terms[:3]])
+    # Choose most frequent voted label
+    labels, counts = np.unique(label_votes, return_counts=True)
+    return labels[np.argmax(counts)]
+
+# Cluster sizes
+cluster_ids, counts = np.unique(labels_final, return_counts=True)
+sizes = dict(zip(cluster_ids, counts))
+
+# Top terms per cluster
+tops = top_terms_per_cluster(best_model, feature_names, top_n=15)
+
+# Assign auto labels
+cluster_labels = {}
+for ci, termlist in tops:
+    lbl = autolabel_from_terms(termlist)
+    cluster_labels[ci] = lbl
+
+# Print interpretation
+print("\n=== Cluster Interpretation ===")
+total = len(df)
+rows_for_csv = []
+for ci in cluster_ids:
+    pct = 100.0 * sizes[ci] / total
+    terms = [t for t, _ in dict(tops)[ci]]
+    label = cluster_labels.get(ci, f"Cluster {ci}")
+    print(f"- Cluster {ci}: {sizes[ci]} docs ({pct:.1f}%) | Label: {label}")
+    print("  Top terms:", ", ".join(terms))
+    print()
+
+# 2D SVD scatter
+svd = TruncatedSVD(n_components=2, random_state=RANDOM_STATE)
+X_2d = svd.fit_transform(X)
+
+plt.figure(figsize=(8, 6))
+for ci in cluster_ids:
+    mask = (labels_final == ci)
+    plt.scatter(X_2d[mask, 0], X_2d[mask, 1], s=16, alpha=0.6, label=f"{ci} (n={sizes[ci]})")
+plt.title(f"Documents in 2D (SVD) colored by Cluster k={best_k}")
+plt.xlabel("SVD-1")
+plt.ylabel("SVD-2")
+plt.legend(loc="best", fontsize=8)
+plt.grid(True)
+plt.tight_layout()
+plt.savefig("/content/svd_scatter.png", dpi=200)
+plt.show()
+
+# Export assignments
+out = df.copy()
+out["cluster"] = labels_final
+out["cluster_label"] = [cluster_labels[c] for c in labels_final]
+out.to_csv("/content/cluster_assignments.csv", index=False)
+
+# Export top terms per cluster as CSV
+rows_tt = []
+for ci, termlist in tops:
+    for term, weight in termlist:
+        rows_tt.append({"cluster": ci, "cluster_label": cluster_labels[ci], "term": term, "weight": float(weight)})
+pd.DataFrame(rows_tt).to_csv("/content/top_terms_per_cluster.csv", index=False)
+
+print("Saved:")
+print(" - /content/cluster_assignments.csv")
+print(" - /content/top_terms_per_cluster.csv")
+print(" - /content/svd_scatter.png")

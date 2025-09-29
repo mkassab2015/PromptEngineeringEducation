@@ -1,0 +1,2848 @@
+{
+  "vocabulary": [
+    "act-like' roles",
+    "adapters",
+    "advanced api programming",
+    "advanced prompt engineering strategies",
+    "advanced prompt engineering techniques",
+    "advanced prompt-engineering techniques",
+    "advanced prompting in copilot notebook",
+    "advanced prompting workflows",
+    "adversarial robustness",
+    "agency and emergence",
+    "agent-based prompting (planning and agents",
+    "agent-based prompting workflows",
+    "agentic ai prompt chaining",
+    "agentic chaining",
+    "agentic prompting workflows",
+    "agentic rag",
+    "agentic technologies",
+    "agentic workflows",
+    "agentic/agents",
+    "ai agent design",
+    "ai agents",
+    "ai alignment",
+    "ai and llm overview",
+    "ai co-pilot workflows",
+    "ai safety considerations",
+    "ai-assisted data analysis",
+    "ai-assisted editing",
+    "ai-driven decision frameworks",
+    "ai-driven project planning",
+    "ai-powered clinical decision support",
+    "aiops prompt use",
+    "algorithms for prompt engineering",
+    "alignment",
+    "alignment with human values",
+    "analysis of prompt examples",
+    "and agentic orchestration for llm-driven human-robot dialogues",
+    "and control",
+    "and data analysis",
+    "and evaluation frameworks",
+    "and music generation",
+    "and programming tasks",
+    "and prompt pattern design",
+    "and usage of a prompt engineering playground",
+    "ape workflow",
+    "api integration",
+    "api usage",
+    "application implementation",
+    "application of prompt templates for resource generation",
+    "applications",
+    "applications of llm tasks (e.g",
+    "audience specification",
+    "autonomous agent prompting workflows",
+    "avoiding prompt pitfalls",
+    "bard",
+    "basic prompt engineering",
+    "basic prompt engineering techniques for effective ai manipulation",
+    "basics of prompting",
+    "benchmarking",
+    "beyond chatbots",
+    "bias and fairness in prompting",
+    "bias assessment and mitigation",
+    "bias mitigation",
+    "bias mitigation in prompts",
+    "biases",
+    "building custom ai prompt tools",
+    "building custom gpts",
+    "calibration",
+    "capabilities of generative ai tools",
+    "case studies on prompt usage",
+    "chain-of-thought",
+    "chain-of-thought & agi reasoning",
+    "chain-of-thought awareness",
+    "chain-of-thought prompting",
+    "chain-of-thought prompting for correctness",
+    "chain-of-thought prompting in computational projects",
+    "chain-of-thought strategies",
+    "chain-of-thought workflows",
+    "chatbot architectures and prompt engineering",
+    "chatbot creation",
+    "chatgpt",
+    "chatgpt plugins",
+    "chatgpt prompt writing",
+    "clarity",
+    "claude",
+    "clear and specific prompts",
+    "co-reference prompting",
+    "collaboration and communication prompts",
+    "combining search with llms",
+    "conditional logic",
+    "confidentiality",
+    "confidentiality management",
+    "configuring prompts for qa and generation tasks",
+    "consistency strategies",
+    "content specificity",
+    "context",
+    "context augmentation",
+    "context design",
+    "context engineering",
+    "context manipulation",
+    "context provision with examples or definitions",
+    "context setting",
+    "context-rich query design",
+    "context-sensitive prompt design",
+    "context-specific prompt design",
+    "contextual prompt design",
+    "contextual prompt refinement",
+    "contextual prompts",
+    "copilot prompts",
+    "cost-efficient frugalgpt strategies",
+    "crafting effective prompts",
+    "crafting effective prompts for inventory analytics",
+    "crafting effective prompts for writing",
+    "crafting prompts for business tasks",
+    "crafting prompts for unit tests",
+    "creating effective prompts",
+    "creation and evaluation of custom gpts",
+    "creative and summarization prompts",
+    "creative content generation",
+    "critical analysis of ai-generated text",
+    "custom gpt model construction",
+    "custom gpts",
+    "custom prompt tool creation",
+    "customising prompts for business objectives",
+    "dall-e",
+    "dall\u00e2\u00b7e 3 prompting principles",
+    "data alignment",
+    "data augmentation via prompt engineering",
+    "data curation",
+    "data techniques",
+    "data-analysis and decision-making prompts",
+    "debiasing",
+    "debugging frameworks",
+    "debugging prompts",
+    "deep learning",
+    "deepseek prompt and tuning techniques for ai assistant creation (ai government assistant",
+    "design and formulation of prompts and inputs for ai systems",
+    "design and implement prompts",
+    "design and realisation of prompts for generative ai art creation",
+    "designing copilot agents",
+    "designing prompts for data-driven tasks",
+    "developing prompts and evaluating ai outputs",
+    "dictionary-based classification",
+    "difference between vague vs. effective prompts",
+    "direct preference optimization",
+    "document similarity measurement",
+    "document summarization",
+    "domain-specific verifiers",
+    "effective prompt crafting",
+    "effective prompt crafting techniques",
+    "effective prompt creation for marketing scenarios",
+    "effective prompt structure",
+    "effective prompting techniques",
+    "embedding",
+    "embedding-based prompt construction",
+    "engineering effective",
+    "enhancing metacognitive skills",
+    "entity recognition & extraction",
+    "ethical and legal aspects of ai text generation",
+    "ethical and legal considerations",
+    "ethical considerations",
+    "ethical considerations in ai-generated text",
+    "ethical considerations of prompt use",
+    "ethical evaluation frameworks",
+    "ethical prompt design",
+    "ethical prompt engineering",
+    "ethical prompt evaluation",
+    "ethical prompted ai deployment",
+    "ethical prompting",
+    "ethics of large language models",
+    "evaluation & refinement",
+    "evaluation and bias mitigation",
+    "evaluation and debugging of ai outputs",
+    "evaluation and debugging of llm outputs",
+    "evaluation of ai outputs",
+    "evaluation of generative ai output",
+    "evaluation of llm outputs",
+    "evaluation of prompt outputs",
+    "evaluation of prompts",
+    "evaluation/debugging",
+    "evolution of prompting. \u00ee\u0088\u0080cite\u00ee\u0088\u0082turn1view0\u00ee\u0088\u0081",
+    "example-based guidance",
+    "experiment with generative ai tools (e.g",
+    "external prompt engineering guides",
+    "few-shot",
+    "few-shot examples",
+    "few-shot in-context prompting",
+    "few-shot prompting",
+    "fine tuning",
+    "fine-tuning",
+    "fine-tuning for domain-specific applications",
+    "fine-tuning prompts",
+    "finetuning techniques",
+    "follow-up prompt techniques",
+    "foundation models",
+    "foundations of llms",
+    "foundations of prompt engineering",
+    "fundamentals of generative ai and prompt engineering",
+    "fundamentals of llm prompting",
+    "fundamentals of prompt engineering",
+    "gemini",
+    "generative agent design",
+    "generative ai",
+    "generative ai for analytics",
+    "generative ai for decision-making",
+    "generative ai fundamentals",
+    "generative ai integration",
+    "generative ai integration in analytics workflows",
+    "generative ai interactions",
+    "generative ai prompts for business use cases",
+    "generative ai risks and mitigations",
+    "generative ai tools",
+    "generative ai tools (chatgpt",
+    "generative classification",
+    "generative large language models",
+    "generative poetry creation",
+    "good prompt engineering for productivity tasks",
+    "governance",
+    "gpt architecture",
+    "graph-based enhancements",
+    "group collaboration",
+    "guardrails and hallucination mitigation",
+    "guide and optimize generative outputs",
+    "hallucination mitigation frameworks",
+    "hallucinations",
+    "harnessing prompt engineering to extract maximum value from llms",
+    "human-centered prompt evaluation",
+    "human-computer interaction",
+    "identify basic strategies for writing prompts for generative ai",
+    "image",
+    "image creation",
+    "impacts",
+    "in-context learning",
+    "in-context prompt design",
+    "in-lab prompt optimization",
+    "inference-time prompt scaling",
+    "instructed llms for chatbots",
+    "instruction",
+    "instruction clarity",
+    "instruction design",
+    "instruction fine-tuning",
+    "instruction repetition",
+    "instruction tuning",
+    "instruction tuning & rlhf",
+    "instruction tuning (methods and data acquisition",
+    "instruction-following models",
+    "integration strategies for domain-specific llm applications",
+    "integration with ai plugins (copilot",
+    "integration with code",
+    "intellectual property issues",
+    "interacting with llms (chatgpt",
+    "interactive prompt exercises",
+    "interactive prompting exercises",
+    "interface-driven prompt engineering",
+    "interpretability",
+    "introduction to prompt engineering",
+    "introduction to prompt engineering: clear instructions",
+    "iterative chaining",
+    "iterative prompt adjustment",
+    "iterative prompt debugging",
+    "iterative prompt design",
+    "iterative prompt development",
+    "iterative prompt engineering",
+    "iterative prompt experimentation",
+    "iterative prompt formulation",
+    "iterative prompt formulation & refinement",
+    "iterative prompt formulation and scenario-based refinement",
+    "iterative prompt optimization",
+    "iterative prompt refinement for education",
+    "iterative prompt tuning for image and video generation",
+    "iterative prompting",
+    "iterative refinement",
+    "iterative refinement of prompts",
+    "iterative refinement. \u00ee\u0088\u0080cite\u00ee\u0088\u0082turn5view0\u00ee\u0088\u0081",
+    "iterative testing",
+    "jailbreaking",
+    "keyword and instruction usage",
+    "knowledge extraction with foundational models",
+    "knowledge graph integration",
+    "language models and prompt engineering",
+    "large language models",
+    "large language models in medical contexts",
+    "large model prompt writing",
+    "legal and trust-oriented prompt constraints",
+    "llm & diffusion model prompts",
+    "llm application design",
+    "llm applications and prompt-based tasks",
+    "llm architecture",
+    "llm fundamentals",
+    "llm infrastructure and toolchain fundamentals",
+    "llm integration. \u00ee\u0088\u0080cite\u00ee\u0088\u0082turn4view0\u00ee\u0088\u0081",
+    "llm optimization",
+    "llm output evaluation and debugging",
+    "llm performance metrics",
+    "llm prompting (chain-of-thought",
+    "llm-based program synthesis",
+    "llms and historical sources",
+    "logical frameworks for prompting",
+    "lora",
+    "machine intelligence",
+    "magic phrases",
+    "manual and programmatic llm interaction techniques",
+    "manual practice in text",
+    "mechanism of chatgpt (generation",
+    "memory-context-planning (mcp",
+    "midjourney",
+    "misinformation mitigation",
+    "mitigation of hallucinations",
+    "model alignment",
+    "model evaluation",
+    "model output optimization",
+    "module on prompt engineering techniques",
+    "module\u00e2 2: generative ai tools and prompt engineering",
+    "multi-hop reasoning",
+    "multi-platform prompt strategies",
+    "multi-stage prompting",
+    "multi-step agentic workflows",
+    "multi-step instructions",
+    "multi-step prompt chains for text",
+    "multimedia prompt engineering",
+    "multimodal ai",
+    "multimodal ai. \u00ee\u0088\u0080cite\u00ee\u0088\u0082turn2view0\u00ee\u0088\u0081",
+    "multimodal generation",
+    "multistep ai prompts",
+    "neural network architectures",
+    "neural networks",
+    "neural text decoding",
+    "one-shot",
+    "open-source model use",
+    "output evaluation frameworks",
+    "output length specification",
+    "output structuring",
+    "overview of llms",
+    "overview of techniques",
+    "parameter tuning",
+    "parameter-efficient fine-tuning (prefix tuning",
+    "parameter-efficient prompt tuning (p-tuning",
+    "performance evaluation frameworks",
+    "perplexity",
+    "persona adoption",
+    "persona prompting",
+    "planning",
+    "policy",
+    "powerful and effective prompt crafting",
+    "ppt creation",
+    "practical prompt design for auditing workflows",
+    "practical prompt design for text",
+    "practical prompting techniques",
+    "practical usage of generative ai models",
+    "privacy and watermarking",
+    "problem-solving and optimisation prompts",
+    "productivity with generative ai",
+    "prompt analysis",
+    "prompt and bot engineering fundamentals",
+    "prompt benchmarking",
+    "prompt best practices",
+    "prompt clarity and specificity",
+    "prompt configuration",
+    "prompt crafting",
+    "prompt crafting for educational content",
+    "prompt crafting techniques for varying complexity",
+    "prompt creation",
+    "prompt creation and refinement",
+    "prompt creation procedures",
+    "prompt creation tips for educational use",
+    "prompt customization",
+    "prompt design best practices",
+    "prompt design for ai assistants",
+    "prompt design for role-play and coaching",
+    "prompt design fundamentals for legal tasks",
+    "prompt design lab projects",
+    "prompt design patterns",
+    "prompt design strategies",
+    "prompt design techniques",
+    "prompt design templates",
+    "prompt design/fundamentals",
+    "prompt development for marketing content",
+    "prompt effectiveness",
+    "prompt engineering",
+    "prompt engineering and applications",
+    "prompt engineering and tuning",
+    "prompt engineering benchmark datasets",
+    "prompt engineering best practices",
+    "prompt engineering concepts",
+    "prompt engineering for chatgpt and midjourney",
+    "prompt engineering for technical writing",
+    "prompt engineering frameworks with chatgpt",
+    "prompt engineering in app design",
+    "prompt engineering labs",
+    "prompt engineering patterns and approaches",
+    "prompt engineering principles for coding tools",
+    "prompt engineering strategies",
+    "prompt engineering strategies for enterprise llm applications",
+    "prompt engineering techniques for chatbots",
+    "prompt engineering techniques including system instruction design",
+    "prompt engineering tips & tricks",
+    "prompt engineering with chatgpt and midjourney to create useful outputs",
+    "prompt engineering with llms",
+    "prompt engineering: engineering good and bad prompts",
+    "prompt evaluation",
+    "prompt evaluation and debugging",
+    "prompt evaluation frameworks",
+    "prompt evaluation metrics",
+    "prompt fairness",
+    "prompt formula components: persona + context + task + format + exemplar + tone",
+    "prompt formulation",
+    "prompt formulation and refinement",
+    "prompt formulation strategies",
+    "prompt hacking",
+    "prompt iteration techniques",
+    "prompt libraries",
+    "prompt patterns (zero-shot",
+    "prompt programming",
+    "prompt refinement",
+    "prompt refinement strategies",
+    "prompt strategies for ai assistants",
+    "prompt strategies for ai-driven penetration tests",
+    "prompt strategies for real-time simulations",
+    "prompt structure",
+    "prompt structuring",
+    "prompt structuring using rtri model (role",
+    "prompt techniques for copilot web and copilot 365",
+    "prompt template design",
+    "prompt templates for custom gpt development",
+    "prompt testing and refinement",
+    "prompt tuning",
+    "prompt tuning and fine-tuning of llms",
+    "prompt workflow design",
+    "prompt workflows",
+    "prompt workflows for automation",
+    "prompt workflows via langchain",
+    "prompt writing for generative ai",
+    "prompt-based agent optimization",
+    "prompt-based ai querying",
+    "prompt-based debugging",
+    "prompt-based model optimization",
+    "prompt-based planning",
+    "prompt-based poc development",
+    "prompt-based revisions",
+    "prompt-based safety constraints",
+    "prompt-based statistical insight",
+    "prompt-based strategic frameworks",
+    "prompt-driven workflow for public document writing",
+    "prompt-engineering strategies for optimizing llms",
+    "prompt-to-prompt",
+    "prompting",
+    "prompting for few-shot learning",
+    "prompting for voice",
+    "prompting generative ai for security tasks",
+    "prompting strategies for ai text generation",
+    "prompting techniques",
+    "python integration for prompt workflows",
+    "quantization",
+    "rag considerations",
+    "rag design",
+    "rag including evaluation metrics",
+    "rag integration",
+    "rag integration prompts",
+    "rag pipelines",
+    "rag prompting",
+    "rapid iteration prompts",
+    "react",
+    "react frameworks",
+    "reasoning and mathematics",
+    "reasoning models",
+    "recommended use-case prompts",
+    "reflection on ai and creativity",
+    "reflexion",
+    "requirements",
+    "research-specific prompt design",
+    "responsible deployment",
+    "responsible prompt engineering",
+    "responsible use of azure openai",
+    "retrieval",
+    "retrieval-augmented generation",
+    "retrieval-augmented generation (rag",
+    "retrieval-augmented prompting",
+    "retrieval-augmented selection",
+    "retrieval-augmented techniques",
+    "review best practices for prompt engineering and ai interaction",
+    "risk considerations",
+    "risk considerations (e.g",
+    "risk mitigation and ethical considerations",
+    "rlhf",
+    "role-based prompting",
+    "safety (prompt injection",
+    "safety and ethics",
+    "safety/risk",
+    "scaling laws",
+    "scaling test-time compute",
+    "scenario-based prompt creation",
+    "scenario-based prompt patterns for multimodal outputs",
+    "scenario-based prompt refinement",
+    "self-consistency",
+    "self-refine",
+    "sentiment analysis",
+    "sft and rlhf prompting",
+    "simulation",
+    "specificity",
+    "speech",
+    "strategic prompt design",
+    "strategic prompt frameworks",
+    "structured instructions",
+    "structured prompt engineering techniques",
+    "structured prompt templates",
+    "structured prompts",
+    "style and tone adaptation",
+    "summarization",
+    "supervised fine-tuning",
+    "supervised ml classification",
+    "system and user roles",
+    "system commands and constraints",
+    "system prompt",
+    "task",
+    "task amplification categories (tacs) framework",
+    "task automation using genai",
+    "techniques for writing effective prompts for generative ai tools like copilot",
+    "temperature tuning",
+    "template design best practices",
+    "term frequency & concordance",
+    "text",
+    "text & image generation",
+    "text generation",
+    "text prompt structuring",
+    "text-to-image prompting",
+    "tips for effective prompts",
+    "tips on effective prompting",
+    "tokenization analysis",
+    "tool use prompting",
+    "tool-based llm interactions",
+    "tool-enabled prompting (llm with tools",
+    "topic modelling",
+    "transformer architecture",
+    "transformer architectures",
+    "transformer foundations",
+    "transformers",
+    "tree-of-thought",
+    "tree-of-thought prompting",
+    "ui",
+    "understanding",
+    "understanding of generative ai and llm functionalities",
+    "understanding token prediction",
+    "unlocking chatgpt's capabilities",
+    "unsupervised clustering",
+    "use of chatgpt for computation and programming",
+    "use of chatgpt in course design",
+    "use of examples",
+    "user prompt",
+    "user-centred prompt design",
+    "ux prompt design",
+    "verification of outputs",
+    "video",
+    "video generation",
+    "video prompt demonstration",
+    "word search",
+    "workflow chaining",
+    "workflow construction",
+    "workflow orchestration",
+    "workflow redesign with prompts",
+    "working with generative ai",
+    "working with generative ai models (text",
+    "writing and refining prompts to optimise ai-generated outputs",
+    "writing style and tone adaptation",
+    "zero-shot",
+    "zero-shot & few-shot prompting",
+    "zero-shot and few-shot learning",
+    "zero-shot code generation",
+    "zero-shot learning",
+    "zero-shot prompting",
+    "zero-shot prompting for maintenance scenarios",
+    "zero-shot prompts for vulnerability detection"
+  ],
+  "synonyms": {
+    "chain-of-thought": [
+      "chain-of-thought",
+      "chain of thought",
+      "cot",
+      "reasoning traces",
+      "scratchpad",
+      "deliberate",
+      "chain-of-thought reasoning",
+      "reasoning"
+    ],
+    "few-shot": [
+      "few shot",
+      "few-shot",
+      "few-shot learning",
+      "in-context examples",
+      "few-shot prompts"
+    ],
+    "zero-shot": [
+      "zero shot",
+      "zero-shot",
+      "zero-shot prompts"
+    ],
+    "in-context learning": [
+      "in-context learning",
+      "icl",
+      "in context learning",
+      "in context"
+    ],
+    "retrieval-augmented generation": [
+      "retrieval augmented generation",
+      "retrieval-augmented generation",
+      "rag",
+      "retrieval augmented generation (rag)"
+    ],
+    "agentic/agents": [
+      "agentic ai",
+      "agent-based prompting",
+      "tool use",
+      "function calling",
+      "toolformer",
+      "workflow/agents",
+      "agents",
+      "agentic prompting",
+      "agentic ai workflows"
+    ],
+    "prompt tuning": [
+      "prompt-tuning",
+      "prompt tuning",
+      "p-tuning",
+      "prefix tuning",
+      "soft prompts",
+      "parameter-efficient fine-tuning"
+    ],
+    "prompt design/fundamentals": [
+      "prompt engineering fundamentals",
+      "prompt engineering techniques",
+      "prompt design",
+      "role-based prompts",
+      "meta prompts",
+      "context-sensitive prompts",
+      "iterative prompt refinement",
+      "prompt optimization",
+      "prompt fundamentals",
+      "prompt engineering principles",
+      "high-level prompt design"
+    ],
+    "evaluation/debugging": [
+      "eval frameworks",
+      "rubrics",
+      "metrics",
+      "prompt debugging",
+      "human-in-the-loop evaluation",
+      "evaluation",
+      "evaluation metrics",
+      "evaluation frameworks"
+    ],
+    "safety/risk": [
+      "hallucination mitigation",
+      "guardrails",
+      "jailbreak mitigation",
+      "toxicity",
+      "bias/fairness",
+      "red teaming",
+      "constitutional ai",
+      "safety",
+      "ethics",
+      "risk"
+    ],
+    "multimodal prompting": [
+      "image prompts",
+      "text-to-image",
+      "audio prompting",
+      "video prompting",
+      "multimodal",
+      "multimodal prompting"
+    ],
+    "data techniques": [
+      "data augmentation",
+      "context window management",
+      "retrieval evaluation",
+      "data augmentation techniques",
+      "context management",
+      "data techniques"
+    ],
+    "applications": [
+      "llm applications",
+      "business applications",
+      "domain-specific prompting",
+      "agentic ai workflows",
+      "productivity enhancement prompts",
+      "workflow optimization",
+      "collaborative agents",
+      "agents workflows"
+    ]
+  },
+  "themes": {
+    "act-like' roles": "Other",
+    "adapters": "Other",
+    "advanced api programming": "Other",
+    "advanced prompt engineering strategies": "Other",
+    "advanced prompt engineering techniques": "Other",
+    "advanced prompt-engineering techniques": "Other",
+    "advanced prompting in copilot notebook": "Other",
+    "advanced prompting workflows": "Other",
+    "adversarial robustness": "Other",
+    "agency and emergence": "Other",
+    "agent-based prompting (planning and agents": "Other",
+    "agent-based prompting workflows": "Other",
+    "agentic ai prompt chaining": "Other",
+    "agentic chaining": "Other",
+    "agentic prompting workflows": "Other",
+    "agentic rag": "Other",
+    "agentic technologies": "Other",
+    "agentic workflows": "Other",
+    "agentic/agents": "Retrieval & Tool/Function Use",
+    "ai agent design": "Other",
+    "ai agents": "Other",
+    "ai alignment": "Other",
+    "ai and llm overview": "Other",
+    "ai co-pilot workflows": "Other",
+    "ai safety considerations": "Other",
+    "ai-assisted data analysis": "Other",
+    "ai-assisted editing": "Other",
+    "ai-driven decision frameworks": "Other",
+    "ai-driven project planning": "Other",
+    "ai-powered clinical decision support": "Other",
+    "aiops prompt use": "Other",
+    "algorithms for prompt engineering": "Other",
+    "alignment": "Other",
+    "alignment with human values": "Other",
+    "analysis of prompt examples": "Other",
+    "and agentic orchestration for llm-driven human-robot dialogues": "Other",
+    "and control": "Other",
+    "and data analysis": "Other",
+    "and evaluation frameworks": "Other",
+    "and music generation": "Other",
+    "and programming tasks": "Other",
+    "and prompt pattern design": "Other",
+    "and usage of a prompt engineering playground": "Other",
+    "ape workflow": "Other",
+    "api integration": "Other",
+    "api usage": "Other",
+    "application implementation": "Other",
+    "application of prompt templates for resource generation": "Other",
+    "applications": "Applications & Domain-specific",
+    "applications of llm tasks (e.g": "Applications & Domain-specific",
+    "audience specification": "Other",
+    "autonomous agent prompting workflows": "Other",
+    "avoiding prompt pitfalls": "Other",
+    "bard": "Other",
+    "basic prompt engineering": "Other",
+    "basic prompt engineering techniques for effective ai manipulation": "Other",
+    "basics of prompting": "Other",
+    "benchmarking": "Other",
+    "beyond chatbots": "Other",
+    "bias and fairness in prompting": "Safety, Risk & Governance",
+    "bias assessment and mitigation": "Safety, Risk & Governance",
+    "bias mitigation": "Safety, Risk & Governance",
+    "bias mitigation in prompts": "Safety, Risk & Governance",
+    "biases": "Safety, Risk & Governance",
+    "building custom ai prompt tools": "Other",
+    "building custom gpts": "Other",
+    "calibration": "Other",
+    "capabilities of generative ai tools": "Other",
+    "case studies on prompt usage": "Other",
+    "chain-of-thought": "Reasoning & Chain-of-Thought",
+    "chain-of-thought & agi reasoning": "Reasoning & Chain-of-Thought",
+    "chain-of-thought awareness": "Reasoning & Chain-of-Thought",
+    "chain-of-thought prompting": "Reasoning & Chain-of-Thought",
+    "chain-of-thought prompting for correctness": "Reasoning & Chain-of-Thought",
+    "chain-of-thought prompting in computational projects": "Reasoning & Chain-of-Thought",
+    "chain-of-thought strategies": "Reasoning & Chain-of-Thought",
+    "chain-of-thought workflows": "Reasoning & Chain-of-Thought",
+    "chatbot architectures and prompt engineering": "Other",
+    "chatbot creation": "Other",
+    "chatgpt": "Other",
+    "chatgpt plugins": "Other",
+    "chatgpt prompt writing": "Other",
+    "clarity": "Other",
+    "claude": "Other",
+    "clear and specific prompts": "Other",
+    "co-reference prompting": "Other",
+    "collaboration and communication prompts": "Other",
+    "combining search with llms": "Other",
+    "conditional logic": "Other",
+    "confidentiality": "Other",
+    "confidentiality management": "Other",
+    "configuring prompts for qa and generation tasks": "Other",
+    "consistency strategies": "Other",
+    "content specificity": "Other",
+    "context": "Other",
+    "context augmentation": "Other",
+    "context design": "Other",
+    "context engineering": "Other",
+    "context manipulation": "Other",
+    "context provision with examples or definitions": "Other",
+    "context setting": "Other",
+    "context-rich query design": "Other",
+    "context-sensitive prompt design": "Other",
+    "context-specific prompt design": "Other",
+    "contextual prompt design": "Other",
+    "contextual prompt refinement": "Other",
+    "contextual prompts": "Other",
+    "copilot prompts": "Other",
+    "cost-efficient frugalgpt strategies": "Other",
+    "crafting effective prompts": "Other",
+    "crafting effective prompts for inventory analytics": "Other",
+    "crafting effective prompts for writing": "Other",
+    "crafting prompts for business tasks": "Other",
+    "crafting prompts for unit tests": "Other",
+    "creating effective prompts": "Other",
+    "creation and evaluation of custom gpts": "Other",
+    "creative and summarization prompts": "Other",
+    "creative content generation": "Other",
+    "critical analysis of ai-generated text": "Other",
+    "custom gpt model construction": "Other",
+    "custom gpts": "Other",
+    "custom prompt tool creation": "Other",
+    "customising prompts for business objectives": "Other",
+    "dall-e": "Other",
+    "dall\u00e2\u00b7e 3 prompting principles": "Other",
+    "data alignment": "Other",
+    "data augmentation via prompt engineering": "Data & Context Management",
+    "data curation": "Other",
+    "data techniques": "Data & Context Management",
+    "data-analysis and decision-making prompts": "Other",
+    "debiasing": "Safety, Risk & Governance",
+    "debugging frameworks": "Evaluation & Debugging",
+    "debugging prompts": "Evaluation & Debugging",
+    "deep learning": "Other",
+    "deepseek prompt and tuning techniques for ai assistant creation (ai government assistant": "Other",
+    "design and formulation of prompts and inputs for ai systems": "Other",
+    "design and implement prompts": "Other",
+    "design and realisation of prompts for generative ai art creation": "Other",
+    "designing copilot agents": "Other",
+    "designing prompts for data-driven tasks": "Other",
+    "developing prompts and evaluating ai outputs": "Other",
+    "dictionary-based classification": "Other",
+    "difference between vague vs. effective prompts": "Other",
+    "direct preference optimization": "Other",
+    "document similarity measurement": "Other",
+    "document summarization": "Other",
+    "domain-specific verifiers": "Applications & Domain-specific",
+    "effective prompt crafting": "Other",
+    "effective prompt crafting techniques": "Other",
+    "effective prompt creation for marketing scenarios": "Other",
+    "effective prompt structure": "Other",
+    "effective prompting techniques": "Other",
+    "embedding": "Other",
+    "embedding-based prompt construction": "Other",
+    "engineering effective": "Other",
+    "enhancing metacognitive skills": "Other",
+    "entity recognition & extraction": "Other",
+    "ethical and legal aspects of ai text generation": "Other",
+    "ethical and legal considerations": "Other",
+    "ethical considerations": "Other",
+    "ethical considerations in ai-generated text": "Other",
+    "ethical considerations of prompt use": "Other",
+    "ethical evaluation frameworks": "Other",
+    "ethical prompt design": "Other",
+    "ethical prompt engineering": "Other",
+    "ethical prompt evaluation": "Other",
+    "ethical prompted ai deployment": "Other",
+    "ethical prompting": "Other",
+    "ethics of large language models": "Other",
+    "evaluation & refinement": "Other",
+    "evaluation and bias mitigation": "Safety, Risk & Governance",
+    "evaluation and debugging of ai outputs": "Evaluation & Debugging",
+    "evaluation and debugging of llm outputs": "Evaluation & Debugging",
+    "evaluation of ai outputs": "Other",
+    "evaluation of generative ai output": "Other",
+    "evaluation of llm outputs": "Other",
+    "evaluation of prompt outputs": "Other",
+    "evaluation of prompts": "Other",
+    "evaluation/debugging": "Evaluation & Debugging",
+    "evolution of prompting. \u00ee\u0088\u0080cite\u00ee\u0088\u0082turn1view0\u00ee\u0088\u0081": "Other",
+    "example-based guidance": "Other",
+    "experiment with generative ai tools (e.g": "Other",
+    "external prompt engineering guides": "Other",
+    "few-shot": "In-Context Learning (Zero/Few-shot)",
+    "few-shot examples": "In-Context Learning (Zero/Few-shot)",
+    "few-shot in-context prompting": "In-Context Learning (Zero/Few-shot)",
+    "few-shot prompting": "In-Context Learning (Zero/Few-shot)",
+    "fine tuning": "Other",
+    "fine-tuning": "Other",
+    "fine-tuning for domain-specific applications": "Applications & Domain-specific",
+    "fine-tuning prompts": "Other",
+    "finetuning techniques": "Other",
+    "follow-up prompt techniques": "Other",
+    "foundation models": "Other",
+    "foundations of llms": "Other",
+    "foundations of prompt engineering": "Other",
+    "fundamentals of generative ai and prompt engineering": "Other",
+    "fundamentals of llm prompting": "Other",
+    "fundamentals of prompt engineering": "Other",
+    "gemini": "Other",
+    "generative agent design": "Other",
+    "generative ai": "Other",
+    "generative ai for analytics": "Other",
+    "generative ai for decision-making": "Other",
+    "generative ai fundamentals": "Other",
+    "generative ai integration": "Other",
+    "generative ai integration in analytics workflows": "Other",
+    "generative ai interactions": "Other",
+    "generative ai prompts for business use cases": "Other",
+    "generative ai risks and mitigations": "Other",
+    "generative ai tools": "Other",
+    "generative ai tools (chatgpt": "Other",
+    "generative classification": "Other",
+    "generative large language models": "Other",
+    "generative poetry creation": "Other",
+    "good prompt engineering for productivity tasks": "Other",
+    "governance": "Other",
+    "gpt architecture": "Other",
+    "graph-based enhancements": "Other",
+    "group collaboration": "Other",
+    "guardrails and hallucination mitigation": "Safety, Risk & Governance",
+    "guide and optimize generative outputs": "Other",
+    "hallucination mitigation frameworks": "Safety, Risk & Governance",
+    "hallucinations": "Safety, Risk & Governance",
+    "harnessing prompt engineering to extract maximum value from llms": "Other",
+    "human-centered prompt evaluation": "Other",
+    "human-computer interaction": "Other",
+    "identify basic strategies for writing prompts for generative ai": "Other",
+    "image": "Other",
+    "image creation": "Other",
+    "impacts": "Other",
+    "in-context learning": "In-Context Learning (Zero/Few-shot)",
+    "in-context prompt design": "Other",
+    "in-lab prompt optimization": "Other",
+    "inference-time prompt scaling": "Other",
+    "instructed llms for chatbots": "Other",
+    "instruction": "Other",
+    "instruction clarity": "Other",
+    "instruction design": "Other",
+    "instruction fine-tuning": "Other",
+    "instruction repetition": "Other",
+    "instruction tuning": "Other",
+    "instruction tuning & rlhf": "Other",
+    "instruction tuning (methods and data acquisition": "Other",
+    "instruction-following models": "Other",
+    "integration strategies for domain-specific llm applications": "Applications & Domain-specific",
+    "integration with ai plugins (copilot": "Other",
+    "integration with code": "Other",
+    "intellectual property issues": "Other",
+    "interacting with llms (chatgpt": "Other",
+    "interactive prompt exercises": "Other",
+    "interactive prompting exercises": "Other",
+    "interface-driven prompt engineering": "Other",
+    "interpretability": "Other",
+    "introduction to prompt engineering": "Other",
+    "introduction to prompt engineering: clear instructions": "Other",
+    "iterative chaining": "Other",
+    "iterative prompt adjustment": "Other",
+    "iterative prompt debugging": "Evaluation & Debugging",
+    "iterative prompt design": "Other",
+    "iterative prompt development": "Other",
+    "iterative prompt engineering": "Other",
+    "iterative prompt experimentation": "Other",
+    "iterative prompt formulation": "Other",
+    "iterative prompt formulation & refinement": "Other",
+    "iterative prompt formulation and scenario-based refinement": "Other",
+    "iterative prompt optimization": "Other",
+    "iterative prompt refinement for education": "Other",
+    "iterative prompt tuning for image and video generation": "Optimization & Tuning",
+    "iterative prompting": "Other",
+    "iterative refinement": "Other",
+    "iterative refinement of prompts": "Other",
+    "iterative refinement. \u00ee\u0088\u0080cite\u00ee\u0088\u0082turn5view0\u00ee\u0088\u0081": "Other",
+    "iterative testing": "Other",
+    "jailbreaking": "Other",
+    "keyword and instruction usage": "Other",
+    "knowledge extraction with foundational models": "Other",
+    "knowledge graph integration": "Other",
+    "language models and prompt engineering": "Other",
+    "large language models": "Other",
+    "large language models in medical contexts": "Other",
+    "large model prompt writing": "Other",
+    "legal and trust-oriented prompt constraints": "Other",
+    "llm & diffusion model prompts": "Other",
+    "llm application design": "Other",
+    "llm applications and prompt-based tasks": "Applications & Domain-specific",
+    "llm architecture": "Other",
+    "llm fundamentals": "Other",
+    "llm infrastructure and toolchain fundamentals": "Other",
+    "llm integration. \u00ee\u0088\u0080cite\u00ee\u0088\u0082turn4view0\u00ee\u0088\u0081": "Other",
+    "llm optimization": "Other",
+    "llm output evaluation and debugging": "Evaluation & Debugging",
+    "llm performance metrics": "Evaluation & Debugging",
+    "llm prompting (chain-of-thought": "Reasoning & Chain-of-Thought",
+    "llm-based program synthesis": "Other",
+    "llms and historical sources": "Other",
+    "logical frameworks for prompting": "Other",
+    "lora": "Other",
+    "machine intelligence": "Other",
+    "magic phrases": "Other",
+    "manual and programmatic llm interaction techniques": "Other",
+    "manual practice in text": "Other",
+    "mechanism of chatgpt (generation": "Other",
+    "memory-context-planning (mcp": "Other",
+    "midjourney": "Other",
+    "misinformation mitigation": "Other",
+    "mitigation of hallucinations": "Safety, Risk & Governance",
+    "model alignment": "Other",
+    "model evaluation": "Other",
+    "model output optimization": "Other",
+    "module on prompt engineering techniques": "Other",
+    "module\u00e2 2: generative ai tools and prompt engineering": "Other",
+    "multi-hop reasoning": "Other",
+    "multi-platform prompt strategies": "Other",
+    "multi-stage prompting": "Other",
+    "multi-step agentic workflows": "Other",
+    "multi-step instructions": "Other",
+    "multi-step prompt chains for text": "Other",
+    "multimedia prompt engineering": "Other",
+    "multimodal ai": "Other",
+    "multimodal ai. \u00ee\u0088\u0080cite\u00ee\u0088\u0082turn2view0\u00ee\u0088\u0081": "Other",
+    "multimodal generation": "Other",
+    "multistep ai prompts": "Other",
+    "neural network architectures": "Other",
+    "neural networks": "Other",
+    "neural text decoding": "Other",
+    "one-shot": "Other",
+    "open-source model use": "Other",
+    "output evaluation frameworks": "Other",
+    "output length specification": "Other",
+    "output structuring": "Other",
+    "overview of llms": "Other",
+    "overview of techniques": "Other",
+    "parameter tuning": "Other",
+    "parameter-efficient fine-tuning (prefix tuning": "Optimization & Tuning",
+    "parameter-efficient prompt tuning (p-tuning": "Optimization & Tuning",
+    "performance evaluation frameworks": "Other",
+    "perplexity": "Other",
+    "persona adoption": "Other",
+    "persona prompting": "Other",
+    "planning": "Other",
+    "policy": "Other",
+    "powerful and effective prompt crafting": "Other",
+    "ppt creation": "Other",
+    "practical prompt design for auditing workflows": "Other",
+    "practical prompt design for text": "Other",
+    "practical prompting techniques": "Other",
+    "practical usage of generative ai models": "Other",
+    "privacy and watermarking": "Other",
+    "problem-solving and optimisation prompts": "Other",
+    "productivity with generative ai": "Other",
+    "prompt analysis": "Other",
+    "prompt and bot engineering fundamentals": "Other",
+    "prompt benchmarking": "Other",
+    "prompt best practices": "Other",
+    "prompt clarity and specificity": "Other",
+    "prompt configuration": "Other",
+    "prompt crafting": "Other",
+    "prompt crafting for educational content": "Other",
+    "prompt crafting techniques for varying complexity": "Other",
+    "prompt creation": "Other",
+    "prompt creation and refinement": "Other",
+    "prompt creation procedures": "Other",
+    "prompt creation tips for educational use": "Other",
+    "prompt customization": "Other",
+    "prompt design best practices": "Other",
+    "prompt design for ai assistants": "Other",
+    "prompt design for role-play and coaching": "Other",
+    "prompt design fundamentals for legal tasks": "Other",
+    "prompt design lab projects": "Other",
+    "prompt design patterns": "Other",
+    "prompt design strategies": "Other",
+    "prompt design techniques": "Other",
+    "prompt design templates": "Other",
+    "prompt design/fundamentals": "Prompt Fundamentals & Design",
+    "prompt development for marketing content": "Other",
+    "prompt effectiveness": "Other",
+    "prompt engineering": "Other",
+    "prompt engineering and applications": "Applications & Domain-specific",
+    "prompt engineering and tuning": "Other",
+    "prompt engineering benchmark datasets": "Other",
+    "prompt engineering best practices": "Other",
+    "prompt engineering concepts": "Other",
+    "prompt engineering for chatgpt and midjourney": "Other",
+    "prompt engineering for technical writing": "Other",
+    "prompt engineering frameworks with chatgpt": "Other",
+    "prompt engineering in app design": "Other",
+    "prompt engineering labs": "Other",
+    "prompt engineering patterns and approaches": "Other",
+    "prompt engineering principles for coding tools": "Prompt Fundamentals & Design",
+    "prompt engineering strategies": "Other",
+    "prompt engineering strategies for enterprise llm applications": "Applications & Domain-specific",
+    "prompt engineering techniques for chatbots": "Other",
+    "prompt engineering techniques including system instruction design": "Other",
+    "prompt engineering tips & tricks": "Other",
+    "prompt engineering with chatgpt and midjourney to create useful outputs": "Other",
+    "prompt engineering with llms": "Other",
+    "prompt engineering: engineering good and bad prompts": "Other",
+    "prompt evaluation": "Other",
+    "prompt evaluation and debugging": "Evaluation & Debugging",
+    "prompt evaluation frameworks": "Other",
+    "prompt evaluation metrics": "Evaluation & Debugging",
+    "prompt fairness": "Safety, Risk & Governance",
+    "prompt formula components: persona + context + task + format + exemplar + tone": "Other",
+    "prompt formulation": "Other",
+    "prompt formulation and refinement": "Other",
+    "prompt formulation strategies": "Other",
+    "prompt hacking": "Other",
+    "prompt iteration techniques": "Other",
+    "prompt libraries": "Other",
+    "prompt patterns (zero-shot": "In-Context Learning (Zero/Few-shot)",
+    "prompt programming": "Other",
+    "prompt refinement": "Other",
+    "prompt refinement strategies": "Other",
+    "prompt strategies for ai assistants": "Other",
+    "prompt strategies for ai-driven penetration tests": "Other",
+    "prompt strategies for real-time simulations": "Other",
+    "prompt structure": "Other",
+    "prompt structuring": "Other",
+    "prompt structuring using rtri model (role": "Other",
+    "prompt techniques for copilot web and copilot 365": "Other",
+    "prompt template design": "Other",
+    "prompt templates for custom gpt development": "Other",
+    "prompt testing and refinement": "Other",
+    "prompt tuning": "Optimization & Tuning",
+    "prompt tuning and fine-tuning of llms": "Optimization & Tuning",
+    "prompt workflow design": "Other",
+    "prompt workflows": "Other",
+    "prompt workflows for automation": "Other",
+    "prompt workflows via langchain": "Other",
+    "prompt writing for generative ai": "Other",
+    "prompt-based agent optimization": "Other",
+    "prompt-based ai querying": "Other",
+    "prompt-based debugging": "Evaluation & Debugging",
+    "prompt-based model optimization": "Other",
+    "prompt-based planning": "Other",
+    "prompt-based poc development": "Other",
+    "prompt-based revisions": "Other",
+    "prompt-based safety constraints": "Other",
+    "prompt-based statistical insight": "Other",
+    "prompt-based strategic frameworks": "Other",
+    "prompt-driven workflow for public document writing": "Other",
+    "prompt-engineering strategies for optimizing llms": "Other",
+    "prompt-to-prompt": "Other",
+    "prompting": "Other",
+    "prompting for few-shot learning": "In-Context Learning (Zero/Few-shot)",
+    "prompting for voice": "Other",
+    "prompting generative ai for security tasks": "Other",
+    "prompting strategies for ai text generation": "Other",
+    "prompting techniques": "Other",
+    "python integration for prompt workflows": "Other",
+    "quantization": "Other",
+    "rag considerations": "Other",
+    "rag design": "Other",
+    "rag including evaluation metrics": "Evaluation & Debugging",
+    "rag integration": "Other",
+    "rag integration prompts": "Other",
+    "rag pipelines": "Other",
+    "rag prompting": "Other",
+    "rapid iteration prompts": "Other",
+    "react": "Other",
+    "react frameworks": "Other",
+    "reasoning and mathematics": "Other",
+    "reasoning models": "Other",
+    "recommended use-case prompts": "Other",
+    "reflection on ai and creativity": "Other",
+    "reflexion": "Other",
+    "requirements": "Other",
+    "research-specific prompt design": "Other",
+    "responsible deployment": "Other",
+    "responsible prompt engineering": "Other",
+    "responsible use of azure openai": "Other",
+    "retrieval": "Other",
+    "retrieval-augmented generation": "Retrieval & Tool/Function Use",
+    "retrieval-augmented generation (rag": "Retrieval & Tool/Function Use",
+    "retrieval-augmented prompting": "Other",
+    "retrieval-augmented selection": "Other",
+    "retrieval-augmented techniques": "Other",
+    "review best practices for prompt engineering and ai interaction": "Other",
+    "risk considerations": "Other",
+    "risk considerations (e.g": "Other",
+    "risk mitigation and ethical considerations": "Other",
+    "rlhf": "Other",
+    "role-based prompting": "Other",
+    "safety (prompt injection": "Other",
+    "safety and ethics": "Other",
+    "safety/risk": "Safety, Risk & Governance",
+    "scaling laws": "Other",
+    "scaling test-time compute": "Other",
+    "scenario-based prompt creation": "Other",
+    "scenario-based prompt patterns for multimodal outputs": "Other",
+    "scenario-based prompt refinement": "Other",
+    "self-consistency": "Other",
+    "self-refine": "Other",
+    "sentiment analysis": "Other",
+    "sft and rlhf prompting": "Other",
+    "simulation": "Other",
+    "specificity": "Other",
+    "speech": "Other",
+    "strategic prompt design": "Other",
+    "strategic prompt frameworks": "Other",
+    "structured instructions": "Other",
+    "structured prompt engineering techniques": "Other",
+    "structured prompt templates": "Other",
+    "structured prompts": "Other",
+    "style and tone adaptation": "Other",
+    "summarization": "Other",
+    "supervised fine-tuning": "Other",
+    "supervised ml classification": "Other",
+    "system and user roles": "Other",
+    "system commands and constraints": "Other",
+    "system prompt": "Other",
+    "task": "Other",
+    "task amplification categories (tacs) framework": "Other",
+    "task automation using genai": "Other",
+    "techniques for writing effective prompts for generative ai tools like copilot": "Other",
+    "temperature tuning": "Other",
+    "template design best practices": "Other",
+    "term frequency & concordance": "Other",
+    "text": "Other",
+    "text & image generation": "Other",
+    "text generation": "Other",
+    "text prompt structuring": "Other",
+    "text-to-image prompting": "Multimodal Prompting",
+    "tips for effective prompts": "Other",
+    "tips on effective prompting": "Other",
+    "tokenization analysis": "Other",
+    "tool use prompting": "Retrieval & Tool/Function Use",
+    "tool-based llm interactions": "Other",
+    "tool-enabled prompting (llm with tools": "Other",
+    "topic modelling": "Other",
+    "transformer architecture": "Other",
+    "transformer architectures": "Other",
+    "transformer foundations": "Other",
+    "transformers": "Other",
+    "tree-of-thought": "Other",
+    "tree-of-thought prompting": "Other",
+    "ui": "Other",
+    "understanding": "Other",
+    "understanding of generative ai and llm functionalities": "Other",
+    "understanding token prediction": "Other",
+    "unlocking chatgpt's capabilities": "Other",
+    "unsupervised clustering": "Other",
+    "use of chatgpt for computation and programming": "Other",
+    "use of chatgpt in course design": "Other",
+    "use of examples": "Other",
+    "user prompt": "Other",
+    "user-centred prompt design": "Other",
+    "ux prompt design": "Other",
+    "verification of outputs": "Other",
+    "video": "Other",
+    "video generation": "Other",
+    "video prompt demonstration": "Other",
+    "word search": "Other",
+    "workflow chaining": "Other",
+    "workflow construction": "Other",
+    "workflow orchestration": "Other",
+    "workflow redesign with prompts": "Other",
+    "working with generative ai": "Other",
+    "working with generative ai models (text": "Other",
+    "writing and refining prompts to optimise ai-generated outputs": "Other",
+    "writing style and tone adaptation": "Other",
+    "zero-shot": "In-Context Learning (Zero/Few-shot)",
+    "zero-shot & few-shot prompting": "In-Context Learning (Zero/Few-shot)",
+    "zero-shot and few-shot learning": "In-Context Learning (Zero/Few-shot)",
+    "zero-shot code generation": "In-Context Learning (Zero/Few-shot)",
+    "zero-shot learning": "In-Context Learning (Zero/Few-shot)",
+    "zero-shot prompting": "In-Context Learning (Zero/Few-shot)",
+    "zero-shot prompting for maintenance scenarios": "In-Context Learning (Zero/Few-shot)",
+    "zero-shot prompts for vulnerability detection": "In-Context Learning (Zero/Few-shot)"
+  },
+  "swebok_mapping": {
+    "act-like' roles": [
+      "Design"
+    ],
+    "adapters": [],
+    "advanced api programming": [],
+    "advanced prompt engineering strategies": [
+      "Construction"
+    ],
+    "advanced prompt engineering techniques": [
+      "Construction"
+    ],
+    "advanced prompt-engineering techniques": [
+      "Construction"
+    ],
+    "advanced prompting in copilot notebook": [
+      "Construction"
+    ],
+    "advanced prompting workflows": [
+      "Design",
+      "Construction",
+      "Process"
+    ],
+    "adversarial robustness": [
+      "Quality"
+    ],
+    "agency and emergence": [],
+    "agent-based prompting (planning and agents": [
+      "Design",
+      "Construction"
+    ],
+    "agent-based prompting workflows": [
+      "Design",
+      "Construction",
+      "Process"
+    ],
+    "agentic ai prompt chaining": [
+      "Design",
+      "Construction"
+    ],
+    "agentic chaining": [
+      "Design"
+    ],
+    "agentic prompting workflows": [
+      "Design",
+      "Construction",
+      "Process"
+    ],
+    "agentic rag": [
+      "Design"
+    ],
+    "agentic technologies": [
+      "Design"
+    ],
+    "agentic workflows": [
+      "Design",
+      "Process"
+    ],
+    "agentic/agents": [
+      "Design"
+    ],
+    "ai agent design": [
+      "Design"
+    ],
+    "ai agents": [
+      "Design"
+    ],
+    "ai alignment": [],
+    "ai and llm overview": [
+      "Foundations"
+    ],
+    "ai co-pilot workflows": [
+      "Design",
+      "Process"
+    ],
+    "ai safety considerations": [
+      "Quality",
+      "Professional Practice/Ethics"
+    ],
+    "ai-assisted data analysis": [],
+    "ai-assisted editing": [],
+    "ai-driven decision frameworks": [],
+    "ai-driven project planning": [],
+    "ai-powered clinical decision support": [],
+    "aiops prompt use": [
+      "Construction",
+      "Process"
+    ],
+    "algorithms for prompt engineering": [
+      "Construction"
+    ],
+    "alignment": [],
+    "alignment with human values": [],
+    "analysis of prompt examples": [
+      "Construction"
+    ],
+    "and agentic orchestration for llm-driven human-robot dialogues": [
+      "Design",
+      "Foundations"
+    ],
+    "and control": [],
+    "and data analysis": [],
+    "and evaluation frameworks": [
+      "Testing"
+    ],
+    "and music generation": [],
+    "and programming tasks": [],
+    "and prompt pattern design": [
+      "Design",
+      "Construction"
+    ],
+    "and usage of a prompt engineering playground": [
+      "Construction"
+    ],
+    "ape workflow": [
+      "Design",
+      "Process"
+    ],
+    "api integration": [],
+    "api usage": [],
+    "application implementation": [],
+    "application of prompt templates for resource generation": [
+      "Construction"
+    ],
+    "applications": [],
+    "applications of llm tasks (e.g": [
+      "Foundations"
+    ],
+    "audience specification": [],
+    "autonomous agent prompting workflows": [
+      "Design",
+      "Construction",
+      "Process"
+    ],
+    "avoiding prompt pitfalls": [
+      "Construction"
+    ],
+    "bard": [],
+    "basic prompt engineering": [
+      "Construction"
+    ],
+    "basic prompt engineering techniques for effective ai manipulation": [
+      "Construction"
+    ],
+    "basics of prompting": [
+      "Construction"
+    ],
+    "benchmarking": [],
+    "beyond chatbots": [],
+    "bias and fairness in prompting": [
+      "Construction",
+      "Quality",
+      "Professional Practice/Ethics"
+    ],
+    "bias assessment and mitigation": [
+      "Quality",
+      "Professional Practice/Ethics"
+    ],
+    "bias mitigation": [
+      "Quality",
+      "Professional Practice/Ethics"
+    ],
+    "bias mitigation in prompts": [
+      "Construction",
+      "Quality",
+      "Professional Practice/Ethics"
+    ],
+    "biases": [
+      "Quality",
+      "Professional Practice/Ethics"
+    ],
+    "building custom ai prompt tools": [
+      "Design",
+      "Construction"
+    ],
+    "building custom gpts": [],
+    "calibration": [],
+    "capabilities of generative ai tools": [
+      "Design"
+    ],
+    "case studies on prompt usage": [
+      "Construction"
+    ],
+    "chain-of-thought": [
+      "Models & Methods"
+    ],
+    "chain-of-thought & agi reasoning": [
+      "Models & Methods"
+    ],
+    "chain-of-thought awareness": [
+      "Models & Methods"
+    ],
+    "chain-of-thought prompting": [
+      "Construction",
+      "Models & Methods"
+    ],
+    "chain-of-thought prompting for correctness": [
+      "Construction",
+      "Models & Methods"
+    ],
+    "chain-of-thought prompting in computational projects": [
+      "Construction",
+      "Models & Methods"
+    ],
+    "chain-of-thought strategies": [
+      "Models & Methods"
+    ],
+    "chain-of-thought workflows": [
+      "Design",
+      "Process",
+      "Models & Methods"
+    ],
+    "chatbot architectures and prompt engineering": [
+      "Construction",
+      "Foundations"
+    ],
+    "chatbot creation": [],
+    "chatgpt": [],
+    "chatgpt plugins": [],
+    "chatgpt prompt writing": [
+      "Construction"
+    ],
+    "clarity": [],
+    "claude": [],
+    "clear and specific prompts": [
+      "Construction"
+    ],
+    "co-reference prompting": [
+      "Construction"
+    ],
+    "collaboration and communication prompts": [
+      "Construction"
+    ],
+    "combining search with llms": [
+      "Foundations"
+    ],
+    "conditional logic": [],
+    "confidentiality": [],
+    "confidentiality management": [
+      "Engineering Management"
+    ],
+    "configuring prompts for qa and generation tasks": [
+      "Construction"
+    ],
+    "consistency strategies": [],
+    "content specificity": [],
+    "context": [
+      "Requirements"
+    ],
+    "context augmentation": [
+      "Requirements"
+    ],
+    "context design": [
+      "Requirements",
+      "Design"
+    ],
+    "context engineering": [
+      "Requirements"
+    ],
+    "context manipulation": [
+      "Requirements"
+    ],
+    "context provision with examples or definitions": [
+      "Requirements"
+    ],
+    "context setting": [
+      "Requirements"
+    ],
+    "context-rich query design": [
+      "Requirements",
+      "Design"
+    ],
+    "context-sensitive prompt design": [
+      "Requirements",
+      "Design",
+      "Construction"
+    ],
+    "context-specific prompt design": [
+      "Requirements",
+      "Design",
+      "Construction"
+    ],
+    "contextual prompt design": [
+      "Requirements",
+      "Design",
+      "Construction"
+    ],
+    "contextual prompt refinement": [
+      "Requirements",
+      "Construction"
+    ],
+    "contextual prompts": [
+      "Requirements",
+      "Construction"
+    ],
+    "copilot prompts": [
+      "Construction"
+    ],
+    "cost-efficient frugalgpt strategies": [
+      "Economics"
+    ],
+    "crafting effective prompts": [
+      "Construction"
+    ],
+    "crafting effective prompts for inventory analytics": [
+      "Construction"
+    ],
+    "crafting effective prompts for writing": [
+      "Construction"
+    ],
+    "crafting prompts for business tasks": [
+      "Construction"
+    ],
+    "crafting prompts for unit tests": [
+      "Construction",
+      "Testing"
+    ],
+    "creating effective prompts": [
+      "Construction"
+    ],
+    "creation and evaluation of custom gpts": [
+      "Testing"
+    ],
+    "creative and summarization prompts": [
+      "Construction"
+    ],
+    "creative content generation": [],
+    "critical analysis of ai-generated text": [],
+    "custom gpt model construction": [],
+    "custom gpts": [],
+    "custom prompt tool creation": [
+      "Design",
+      "Construction"
+    ],
+    "customising prompts for business objectives": [
+      "Construction"
+    ],
+    "dall-e": [],
+    "dall\u00e2\u00b7e 3 prompting principles": [
+      "Construction"
+    ],
+    "data alignment": [],
+    "data augmentation via prompt engineering": [
+      "Construction"
+    ],
+    "data curation": [],
+    "data techniques": [],
+    "data-analysis and decision-making prompts": [
+      "Construction"
+    ],
+    "debiasing": [
+      "Quality",
+      "Professional Practice/Ethics"
+    ],
+    "debugging frameworks": [
+      "Testing"
+    ],
+    "debugging prompts": [
+      "Construction",
+      "Testing"
+    ],
+    "deep learning": [],
+    "deepseek prompt and tuning techniques for ai assistant creation (ai government assistant": [
+      "Construction"
+    ],
+    "design and formulation of prompts and inputs for ai systems": [
+      "Design",
+      "Construction"
+    ],
+    "design and implement prompts": [
+      "Design",
+      "Construction"
+    ],
+    "design and realisation of prompts for generative ai art creation": [
+      "Design",
+      "Construction"
+    ],
+    "designing copilot agents": [
+      "Design"
+    ],
+    "designing prompts for data-driven tasks": [
+      "Design",
+      "Construction"
+    ],
+    "developing prompts and evaluating ai outputs": [
+      "Construction"
+    ],
+    "dictionary-based classification": [],
+    "difference between vague vs. effective prompts": [
+      "Construction"
+    ],
+    "direct preference optimization": [
+      "Construction"
+    ],
+    "document similarity measurement": [],
+    "document summarization": [],
+    "domain-specific verifiers": [],
+    "effective prompt crafting": [
+      "Construction"
+    ],
+    "effective prompt crafting techniques": [
+      "Construction"
+    ],
+    "effective prompt creation for marketing scenarios": [
+      "Construction"
+    ],
+    "effective prompt structure": [
+      "Construction"
+    ],
+    "effective prompting techniques": [
+      "Construction"
+    ],
+    "embedding": [],
+    "embedding-based prompt construction": [
+      "Construction"
+    ],
+    "engineering effective": [],
+    "enhancing metacognitive skills": [],
+    "entity recognition & extraction": [],
+    "ethical and legal aspects of ai text generation": [
+      "Professional Practice/Ethics"
+    ],
+    "ethical and legal considerations": [
+      "Professional Practice/Ethics"
+    ],
+    "ethical considerations": [
+      "Professional Practice/Ethics"
+    ],
+    "ethical considerations in ai-generated text": [
+      "Professional Practice/Ethics"
+    ],
+    "ethical considerations of prompt use": [
+      "Construction",
+      "Professional Practice/Ethics"
+    ],
+    "ethical evaluation frameworks": [
+      "Testing",
+      "Professional Practice/Ethics"
+    ],
+    "ethical prompt design": [
+      "Design",
+      "Construction",
+      "Professional Practice/Ethics"
+    ],
+    "ethical prompt engineering": [
+      "Construction",
+      "Professional Practice/Ethics"
+    ],
+    "ethical prompt evaluation": [
+      "Construction",
+      "Testing",
+      "Professional Practice/Ethics"
+    ],
+    "ethical prompted ai deployment": [
+      "Construction",
+      "Professional Practice/Ethics"
+    ],
+    "ethical prompting": [
+      "Construction",
+      "Professional Practice/Ethics"
+    ],
+    "ethics of large language models": [
+      "Professional Practice/Ethics"
+    ],
+    "evaluation & refinement": [
+      "Testing"
+    ],
+    "evaluation and bias mitigation": [
+      "Testing",
+      "Quality",
+      "Professional Practice/Ethics"
+    ],
+    "evaluation and debugging of ai outputs": [
+      "Testing"
+    ],
+    "evaluation and debugging of llm outputs": [
+      "Testing",
+      "Foundations"
+    ],
+    "evaluation of ai outputs": [
+      "Testing"
+    ],
+    "evaluation of generative ai output": [
+      "Testing"
+    ],
+    "evaluation of llm outputs": [
+      "Testing",
+      "Foundations"
+    ],
+    "evaluation of prompt outputs": [
+      "Construction",
+      "Testing"
+    ],
+    "evaluation of prompts": [
+      "Construction",
+      "Testing"
+    ],
+    "evaluation/debugging": [
+      "Testing"
+    ],
+    "evolution of prompting. \u00ee\u0088\u0080cite\u00ee\u0088\u0082turn1view0\u00ee\u0088\u0081": [
+      "Construction"
+    ],
+    "example-based guidance": [],
+    "experiment with generative ai tools (e.g": [
+      "Design"
+    ],
+    "external prompt engineering guides": [
+      "Construction"
+    ],
+    "few-shot": [
+      "Models & Methods"
+    ],
+    "few-shot examples": [
+      "Models & Methods"
+    ],
+    "few-shot in-context prompting": [
+      "Requirements",
+      "Construction",
+      "Models & Methods"
+    ],
+    "few-shot prompting": [
+      "Construction",
+      "Models & Methods"
+    ],
+    "fine tuning": [
+      "Construction"
+    ],
+    "fine-tuning": [
+      "Construction",
+      "Foundations"
+    ],
+    "fine-tuning for domain-specific applications": [
+      "Construction",
+      "Foundations"
+    ],
+    "fine-tuning prompts": [
+      "Construction",
+      "Foundations"
+    ],
+    "finetuning techniques": [
+      "Construction"
+    ],
+    "follow-up prompt techniques": [
+      "Construction"
+    ],
+    "foundation models": [
+      "Foundations"
+    ],
+    "foundations of llms": [
+      "Foundations"
+    ],
+    "foundations of prompt engineering": [
+      "Construction",
+      "Foundations"
+    ],
+    "fundamentals of generative ai and prompt engineering": [
+      "Construction"
+    ],
+    "fundamentals of llm prompting": [
+      "Construction",
+      "Foundations"
+    ],
+    "fundamentals of prompt engineering": [
+      "Construction"
+    ],
+    "gemini": [],
+    "generative agent design": [
+      "Design"
+    ],
+    "generative ai": [],
+    "generative ai for analytics": [],
+    "generative ai for decision-making": [],
+    "generative ai fundamentals": [],
+    "generative ai integration": [],
+    "generative ai integration in analytics workflows": [
+      "Design",
+      "Process"
+    ],
+    "generative ai interactions": [],
+    "generative ai prompts for business use cases": [
+      "Construction"
+    ],
+    "generative ai risks and mitigations": [
+      "Engineering Management",
+      "Professional Practice/Ethics"
+    ],
+    "generative ai tools": [
+      "Design"
+    ],
+    "generative ai tools (chatgpt": [
+      "Design"
+    ],
+    "generative classification": [],
+    "generative large language models": [],
+    "generative poetry creation": [],
+    "good prompt engineering for productivity tasks": [
+      "Construction"
+    ],
+    "governance": [
+      "Engineering Management"
+    ],
+    "gpt architecture": [
+      "Foundations"
+    ],
+    "graph-based enhancements": [],
+    "group collaboration": [],
+    "guardrails and hallucination mitigation": [
+      "Quality"
+    ],
+    "guide and optimize generative outputs": [],
+    "hallucination mitigation frameworks": [
+      "Quality"
+    ],
+    "hallucinations": [
+      "Quality"
+    ],
+    "harnessing prompt engineering to extract maximum value from llms": [
+      "Construction",
+      "Foundations"
+    ],
+    "human-centered prompt evaluation": [
+      "Construction",
+      "Testing"
+    ],
+    "human-computer interaction": [],
+    "identify basic strategies for writing prompts for generative ai": [
+      "Construction"
+    ],
+    "image": [],
+    "image creation": [],
+    "impacts": [],
+    "in-context learning": [
+      "Requirements",
+      "Models & Methods"
+    ],
+    "in-context prompt design": [
+      "Requirements",
+      "Design",
+      "Construction",
+      "Models & Methods"
+    ],
+    "in-lab prompt optimization": [
+      "Construction"
+    ],
+    "inference-time prompt scaling": [
+      "Construction"
+    ],
+    "instructed llms for chatbots": [
+      "Foundations"
+    ],
+    "instruction": [],
+    "instruction clarity": [],
+    "instruction design": [
+      "Design"
+    ],
+    "instruction fine-tuning": [
+      "Construction",
+      "Foundations"
+    ],
+    "instruction repetition": [],
+    "instruction tuning": [
+      "Construction"
+    ],
+    "instruction tuning & rlhf": [
+      "Construction",
+      "Foundations"
+    ],
+    "instruction tuning (methods and data acquisition": [
+      "Construction"
+    ],
+    "instruction-following models": [],
+    "integration strategies for domain-specific llm applications": [
+      "Foundations"
+    ],
+    "integration with ai plugins (copilot": [],
+    "integration with code": [],
+    "intellectual property issues": [],
+    "interacting with llms (chatgpt": [
+      "Foundations"
+    ],
+    "interactive prompt exercises": [
+      "Construction"
+    ],
+    "interactive prompting exercises": [
+      "Construction"
+    ],
+    "interface-driven prompt engineering": [
+      "Construction"
+    ],
+    "interpretability": [],
+    "introduction to prompt engineering": [
+      "Construction"
+    ],
+    "introduction to prompt engineering: clear instructions": [
+      "Construction"
+    ],
+    "iterative chaining": [],
+    "iterative prompt adjustment": [
+      "Construction"
+    ],
+    "iterative prompt debugging": [
+      "Construction",
+      "Testing"
+    ],
+    "iterative prompt design": [
+      "Design",
+      "Construction"
+    ],
+    "iterative prompt development": [
+      "Construction"
+    ],
+    "iterative prompt engineering": [
+      "Construction"
+    ],
+    "iterative prompt experimentation": [
+      "Construction"
+    ],
+    "iterative prompt formulation": [
+      "Construction"
+    ],
+    "iterative prompt formulation & refinement": [
+      "Construction"
+    ],
+    "iterative prompt formulation and scenario-based refinement": [
+      "Construction"
+    ],
+    "iterative prompt optimization": [
+      "Construction"
+    ],
+    "iterative prompt refinement for education": [
+      "Construction"
+    ],
+    "iterative prompt tuning for image and video generation": [
+      "Construction"
+    ],
+    "iterative prompting": [
+      "Construction"
+    ],
+    "iterative refinement": [],
+    "iterative refinement of prompts": [
+      "Construction"
+    ],
+    "iterative refinement. \u00ee\u0088\u0080cite\u00ee\u0088\u0082turn5view0\u00ee\u0088\u0081": [],
+    "iterative testing": [
+      "Testing"
+    ],
+    "jailbreaking": [],
+    "keyword and instruction usage": [],
+    "knowledge extraction with foundational models": [
+      "Foundations"
+    ],
+    "knowledge graph integration": [],
+    "language models and prompt engineering": [
+      "Construction"
+    ],
+    "large language models": [],
+    "large language models in medical contexts": [
+      "Requirements"
+    ],
+    "large model prompt writing": [
+      "Construction"
+    ],
+    "legal and trust-oriented prompt constraints": [
+      "Construction"
+    ],
+    "llm & diffusion model prompts": [
+      "Construction",
+      "Foundations"
+    ],
+    "llm application design": [
+      "Design",
+      "Foundations"
+    ],
+    "llm applications and prompt-based tasks": [
+      "Construction",
+      "Foundations"
+    ],
+    "llm architecture": [
+      "Foundations"
+    ],
+    "llm fundamentals": [
+      "Foundations"
+    ],
+    "llm infrastructure and toolchain fundamentals": [
+      "Design",
+      "Foundations"
+    ],
+    "llm integration. \u00ee\u0088\u0080cite\u00ee\u0088\u0082turn4view0\u00ee\u0088\u0081": [
+      "Foundations"
+    ],
+    "llm optimization": [
+      "Construction",
+      "Foundations"
+    ],
+    "llm output evaluation and debugging": [
+      "Testing",
+      "Foundations"
+    ],
+    "llm performance metrics": [
+      "Testing",
+      "Foundations"
+    ],
+    "llm prompting (chain-of-thought": [
+      "Construction",
+      "Models & Methods",
+      "Foundations"
+    ],
+    "llm-based program synthesis": [
+      "Foundations"
+    ],
+    "llms and historical sources": [
+      "Foundations"
+    ],
+    "logical frameworks for prompting": [
+      "Construction"
+    ],
+    "lora": [],
+    "machine intelligence": [],
+    "magic phrases": [],
+    "manual and programmatic llm interaction techniques": [
+      "Foundations"
+    ],
+    "manual practice in text": [],
+    "mechanism of chatgpt (generation": [],
+    "memory-context-planning (mcp": [
+      "Requirements"
+    ],
+    "midjourney": [],
+    "misinformation mitigation": [],
+    "mitigation of hallucinations": [
+      "Quality"
+    ],
+    "model alignment": [],
+    "model evaluation": [
+      "Testing"
+    ],
+    "model output optimization": [
+      "Construction"
+    ],
+    "module on prompt engineering techniques": [
+      "Construction"
+    ],
+    "module\u00e2 2: generative ai tools and prompt engineering": [
+      "Design",
+      "Construction"
+    ],
+    "multi-hop reasoning": [],
+    "multi-platform prompt strategies": [
+      "Construction"
+    ],
+    "multi-stage prompting": [
+      "Construction"
+    ],
+    "multi-step agentic workflows": [
+      "Design",
+      "Process"
+    ],
+    "multi-step instructions": [],
+    "multi-step prompt chains for text": [
+      "Construction"
+    ],
+    "multimedia prompt engineering": [
+      "Construction"
+    ],
+    "multimodal ai": [],
+    "multimodal ai. \u00ee\u0088\u0080cite\u00ee\u0088\u0082turn2view0\u00ee\u0088\u0081": [],
+    "multimodal generation": [],
+    "multistep ai prompts": [
+      "Construction"
+    ],
+    "neural network architectures": [
+      "Foundations"
+    ],
+    "neural networks": [],
+    "neural text decoding": [],
+    "one-shot": [],
+    "open-source model use": [],
+    "output evaluation frameworks": [
+      "Testing"
+    ],
+    "output length specification": [],
+    "output structuring": [],
+    "overview of llms": [
+      "Foundations"
+    ],
+    "overview of techniques": [],
+    "parameter tuning": [
+      "Construction"
+    ],
+    "parameter-efficient fine-tuning (prefix tuning": [
+      "Construction",
+      "Foundations"
+    ],
+    "parameter-efficient prompt tuning (p-tuning": [
+      "Construction"
+    ],
+    "performance evaluation frameworks": [
+      "Testing"
+    ],
+    "perplexity": [],
+    "persona adoption": [],
+    "persona prompting": [
+      "Construction"
+    ],
+    "planning": [],
+    "policy": [],
+    "powerful and effective prompt crafting": [
+      "Construction"
+    ],
+    "ppt creation": [],
+    "practical prompt design for auditing workflows": [
+      "Design",
+      "Construction",
+      "Process"
+    ],
+    "practical prompt design for text": [
+      "Design",
+      "Construction"
+    ],
+    "practical prompting techniques": [
+      "Construction"
+    ],
+    "practical usage of generative ai models": [],
+    "privacy and watermarking": [],
+    "problem-solving and optimisation prompts": [
+      "Construction"
+    ],
+    "productivity with generative ai": [],
+    "prompt analysis": [
+      "Construction"
+    ],
+    "prompt and bot engineering fundamentals": [
+      "Construction"
+    ],
+    "prompt benchmarking": [
+      "Construction"
+    ],
+    "prompt best practices": [
+      "Construction"
+    ],
+    "prompt clarity and specificity": [
+      "Construction"
+    ],
+    "prompt configuration": [
+      "Construction",
+      "Configuration Management"
+    ],
+    "prompt crafting": [
+      "Construction"
+    ],
+    "prompt crafting for educational content": [
+      "Construction"
+    ],
+    "prompt crafting techniques for varying complexity": [
+      "Construction"
+    ],
+    "prompt creation": [
+      "Construction"
+    ],
+    "prompt creation and refinement": [
+      "Construction"
+    ],
+    "prompt creation procedures": [
+      "Construction"
+    ],
+    "prompt creation tips for educational use": [
+      "Construction"
+    ],
+    "prompt customization": [
+      "Construction"
+    ],
+    "prompt design best practices": [
+      "Design",
+      "Construction"
+    ],
+    "prompt design for ai assistants": [
+      "Design",
+      "Construction"
+    ],
+    "prompt design for role-play and coaching": [
+      "Design",
+      "Construction"
+    ],
+    "prompt design fundamentals for legal tasks": [
+      "Design",
+      "Construction"
+    ],
+    "prompt design lab projects": [
+      "Design",
+      "Construction"
+    ],
+    "prompt design patterns": [
+      "Design",
+      "Construction"
+    ],
+    "prompt design strategies": [
+      "Design",
+      "Construction"
+    ],
+    "prompt design techniques": [
+      "Design",
+      "Construction"
+    ],
+    "prompt design templates": [
+      "Design",
+      "Construction"
+    ],
+    "prompt design/fundamentals": [
+      "Design",
+      "Construction"
+    ],
+    "prompt development for marketing content": [
+      "Construction"
+    ],
+    "prompt effectiveness": [
+      "Construction"
+    ],
+    "prompt engineering": [
+      "Construction"
+    ],
+    "prompt engineering and applications": [
+      "Construction"
+    ],
+    "prompt engineering and tuning": [
+      "Construction"
+    ],
+    "prompt engineering benchmark datasets": [
+      "Construction",
+      "Configuration Management"
+    ],
+    "prompt engineering best practices": [
+      "Construction"
+    ],
+    "prompt engineering concepts": [
+      "Construction"
+    ],
+    "prompt engineering for chatgpt and midjourney": [
+      "Construction"
+    ],
+    "prompt engineering for technical writing": [
+      "Construction"
+    ],
+    "prompt engineering frameworks with chatgpt": [
+      "Construction"
+    ],
+    "prompt engineering in app design": [
+      "Design",
+      "Construction"
+    ],
+    "prompt engineering labs": [
+      "Construction"
+    ],
+    "prompt engineering patterns and approaches": [
+      "Construction"
+    ],
+    "prompt engineering principles for coding tools": [
+      "Design",
+      "Construction"
+    ],
+    "prompt engineering strategies": [
+      "Construction"
+    ],
+    "prompt engineering strategies for enterprise llm applications": [
+      "Construction",
+      "Foundations"
+    ],
+    "prompt engineering techniques for chatbots": [
+      "Construction"
+    ],
+    "prompt engineering techniques including system instruction design": [
+      "Design",
+      "Construction"
+    ],
+    "prompt engineering tips & tricks": [
+      "Construction"
+    ],
+    "prompt engineering with chatgpt and midjourney to create useful outputs": [
+      "Construction"
+    ],
+    "prompt engineering with llms": [
+      "Construction",
+      "Foundations"
+    ],
+    "prompt engineering: engineering good and bad prompts": [
+      "Construction"
+    ],
+    "prompt evaluation": [
+      "Construction",
+      "Testing"
+    ],
+    "prompt evaluation and debugging": [
+      "Construction",
+      "Testing"
+    ],
+    "prompt evaluation frameworks": [
+      "Construction",
+      "Testing"
+    ],
+    "prompt evaluation metrics": [
+      "Construction",
+      "Testing"
+    ],
+    "prompt fairness": [
+      "Construction",
+      "Quality",
+      "Professional Practice/Ethics"
+    ],
+    "prompt formula components: persona + context + task + format + exemplar + tone": [
+      "Requirements",
+      "Construction"
+    ],
+    "prompt formulation": [
+      "Construction"
+    ],
+    "prompt formulation and refinement": [
+      "Construction"
+    ],
+    "prompt formulation strategies": [
+      "Construction"
+    ],
+    "prompt hacking": [
+      "Construction"
+    ],
+    "prompt iteration techniques": [
+      "Construction"
+    ],
+    "prompt libraries": [
+      "Construction"
+    ],
+    "prompt patterns (zero-shot": [
+      "Construction",
+      "Models & Methods"
+    ],
+    "prompt programming": [
+      "Construction"
+    ],
+    "prompt refinement": [
+      "Construction"
+    ],
+    "prompt refinement strategies": [
+      "Construction"
+    ],
+    "prompt strategies for ai assistants": [
+      "Construction"
+    ],
+    "prompt strategies for ai-driven penetration tests": [
+      "Construction",
+      "Testing"
+    ],
+    "prompt strategies for real-time simulations": [
+      "Construction"
+    ],
+    "prompt structure": [
+      "Construction"
+    ],
+    "prompt structuring": [
+      "Construction"
+    ],
+    "prompt structuring using rtri model (role": [
+      "Design",
+      "Construction"
+    ],
+    "prompt techniques for copilot web and copilot 365": [
+      "Construction"
+    ],
+    "prompt template design": [
+      "Design",
+      "Construction"
+    ],
+    "prompt templates for custom gpt development": [
+      "Construction"
+    ],
+    "prompt testing and refinement": [
+      "Construction",
+      "Testing"
+    ],
+    "prompt tuning": [
+      "Construction"
+    ],
+    "prompt tuning and fine-tuning of llms": [
+      "Construction",
+      "Foundations"
+    ],
+    "prompt workflow design": [
+      "Design",
+      "Construction",
+      "Process"
+    ],
+    "prompt workflows": [
+      "Design",
+      "Construction",
+      "Process"
+    ],
+    "prompt workflows for automation": [
+      "Design",
+      "Construction",
+      "Process"
+    ],
+    "prompt workflows via langchain": [
+      "Design",
+      "Construction",
+      "Process"
+    ],
+    "prompt writing for generative ai": [
+      "Construction"
+    ],
+    "prompt-based agent optimization": [
+      "Design",
+      "Construction"
+    ],
+    "prompt-based ai querying": [
+      "Construction"
+    ],
+    "prompt-based debugging": [
+      "Construction",
+      "Testing"
+    ],
+    "prompt-based model optimization": [
+      "Construction"
+    ],
+    "prompt-based planning": [
+      "Construction"
+    ],
+    "prompt-based poc development": [
+      "Construction"
+    ],
+    "prompt-based revisions": [
+      "Construction"
+    ],
+    "prompt-based safety constraints": [
+      "Construction",
+      "Quality",
+      "Professional Practice/Ethics"
+    ],
+    "prompt-based statistical insight": [
+      "Construction"
+    ],
+    "prompt-based strategic frameworks": [
+      "Construction"
+    ],
+    "prompt-driven workflow for public document writing": [
+      "Design",
+      "Construction",
+      "Process"
+    ],
+    "prompt-engineering strategies for optimizing llms": [
+      "Construction",
+      "Foundations"
+    ],
+    "prompt-to-prompt": [
+      "Construction"
+    ],
+    "prompting": [
+      "Construction"
+    ],
+    "prompting for few-shot learning": [
+      "Construction",
+      "Models & Methods"
+    ],
+    "prompting for voice": [
+      "Construction"
+    ],
+    "prompting generative ai for security tasks": [
+      "Construction"
+    ],
+    "prompting strategies for ai text generation": [
+      "Construction"
+    ],
+    "prompting techniques": [
+      "Construction"
+    ],
+    "python integration for prompt workflows": [
+      "Design",
+      "Construction",
+      "Process"
+    ],
+    "quantization": [],
+    "rag considerations": [
+      "Design"
+    ],
+    "rag design": [
+      "Design"
+    ],
+    "rag including evaluation metrics": [
+      "Design",
+      "Testing"
+    ],
+    "rag integration": [
+      "Design"
+    ],
+    "rag integration prompts": [
+      "Design",
+      "Construction"
+    ],
+    "rag pipelines": [
+      "Design",
+      "Process"
+    ],
+    "rag prompting": [
+      "Design",
+      "Construction"
+    ],
+    "rapid iteration prompts": [
+      "Construction"
+    ],
+    "react": [],
+    "react frameworks": [],
+    "reasoning and mathematics": [],
+    "reasoning models": [],
+    "recommended use-case prompts": [
+      "Construction"
+    ],
+    "reflection on ai and creativity": [],
+    "reflexion": [],
+    "requirements": [
+      "Requirements"
+    ],
+    "research-specific prompt design": [
+      "Design",
+      "Construction"
+    ],
+    "responsible deployment": [],
+    "responsible prompt engineering": [
+      "Construction"
+    ],
+    "responsible use of azure openai": [],
+    "retrieval": [
+      "Design"
+    ],
+    "retrieval-augmented generation": [
+      "Design"
+    ],
+    "retrieval-augmented generation (rag": [
+      "Design"
+    ],
+    "retrieval-augmented prompting": [
+      "Design",
+      "Construction"
+    ],
+    "retrieval-augmented selection": [
+      "Design"
+    ],
+    "retrieval-augmented techniques": [
+      "Design"
+    ],
+    "review best practices for prompt engineering and ai interaction": [
+      "Construction"
+    ],
+    "risk considerations": [
+      "Engineering Management",
+      "Professional Practice/Ethics"
+    ],
+    "risk considerations (e.g": [
+      "Engineering Management",
+      "Professional Practice/Ethics"
+    ],
+    "risk mitigation and ethical considerations": [
+      "Engineering Management",
+      "Professional Practice/Ethics"
+    ],
+    "rlhf": [
+      "Foundations"
+    ],
+    "role-based prompting": [
+      "Design",
+      "Construction"
+    ],
+    "safety (prompt injection": [
+      "Construction",
+      "Quality",
+      "Professional Practice/Ethics"
+    ],
+    "safety and ethics": [
+      "Quality",
+      "Professional Practice/Ethics"
+    ],
+    "safety/risk": [
+      "Engineering Management",
+      "Quality",
+      "Professional Practice/Ethics"
+    ],
+    "scaling laws": [],
+    "scaling test-time compute": [
+      "Testing"
+    ],
+    "scenario-based prompt creation": [
+      "Construction"
+    ],
+    "scenario-based prompt patterns for multimodal outputs": [
+      "Construction"
+    ],
+    "scenario-based prompt refinement": [
+      "Construction"
+    ],
+    "self-consistency": [
+      "Models & Methods"
+    ],
+    "self-refine": [],
+    "sentiment analysis": [],
+    "sft and rlhf prompting": [
+      "Construction",
+      "Foundations"
+    ],
+    "simulation": [],
+    "specificity": [],
+    "speech": [],
+    "strategic prompt design": [
+      "Design",
+      "Construction"
+    ],
+    "strategic prompt frameworks": [
+      "Construction"
+    ],
+    "structured instructions": [],
+    "structured prompt engineering techniques": [
+      "Construction"
+    ],
+    "structured prompt templates": [
+      "Construction"
+    ],
+    "structured prompts": [
+      "Construction"
+    ],
+    "style and tone adaptation": [],
+    "summarization": [],
+    "supervised fine-tuning": [
+      "Construction",
+      "Foundations"
+    ],
+    "supervised ml classification": [],
+    "system and user roles": [
+      "Design"
+    ],
+    "system commands and constraints": [],
+    "system prompt": [
+      "Construction"
+    ],
+    "task": [],
+    "task amplification categories (tacs) framework": [],
+    "task automation using genai": [],
+    "techniques for writing effective prompts for generative ai tools like copilot": [
+      "Design",
+      "Construction"
+    ],
+    "temperature tuning": [
+      "Construction"
+    ],
+    "template design best practices": [
+      "Design"
+    ],
+    "term frequency & concordance": [],
+    "text": [],
+    "text & image generation": [],
+    "text generation": [],
+    "text prompt structuring": [
+      "Construction"
+    ],
+    "text-to-image prompting": [
+      "Construction"
+    ],
+    "tips for effective prompts": [
+      "Construction"
+    ],
+    "tips on effective prompting": [
+      "Construction"
+    ],
+    "tokenization analysis": [
+      "Economics"
+    ],
+    "tool use prompting": [
+      "Design",
+      "Construction"
+    ],
+    "tool-based llm interactions": [
+      "Design",
+      "Foundations"
+    ],
+    "tool-enabled prompting (llm with tools": [
+      "Design",
+      "Construction",
+      "Foundations"
+    ],
+    "topic modelling": [],
+    "transformer architecture": [
+      "Foundations"
+    ],
+    "transformer architectures": [
+      "Foundations"
+    ],
+    "transformer foundations": [
+      "Foundations"
+    ],
+    "transformers": [
+      "Foundations"
+    ],
+    "tree-of-thought": [],
+    "tree-of-thought prompting": [
+      "Construction"
+    ],
+    "ui": [],
+    "understanding": [],
+    "understanding of generative ai and llm functionalities": [
+      "Foundations"
+    ],
+    "understanding token prediction": [
+      "Economics"
+    ],
+    "unlocking chatgpt's capabilities": [],
+    "unsupervised clustering": [],
+    "use of chatgpt for computation and programming": [],
+    "use of chatgpt in course design": [
+      "Design"
+    ],
+    "use of examples": [],
+    "user prompt": [
+      "Construction"
+    ],
+    "user-centred prompt design": [
+      "Design",
+      "Construction"
+    ],
+    "ux prompt design": [
+      "Design",
+      "Construction"
+    ],
+    "verification of outputs": [],
+    "video": [],
+    "video generation": [],
+    "video prompt demonstration": [
+      "Construction"
+    ],
+    "word search": [],
+    "workflow chaining": [
+      "Design",
+      "Process"
+    ],
+    "workflow construction": [
+      "Design",
+      "Process"
+    ],
+    "workflow orchestration": [
+      "Design",
+      "Process"
+    ],
+    "workflow redesign with prompts": [
+      "Design",
+      "Construction",
+      "Process"
+    ],
+    "working with generative ai": [],
+    "working with generative ai models (text": [],
+    "writing and refining prompts to optimise ai-generated outputs": [
+      "Construction"
+    ],
+    "writing style and tone adaptation": [],
+    "zero-shot": [
+      "Models & Methods"
+    ],
+    "zero-shot & few-shot prompting": [
+      "Construction",
+      "Models & Methods"
+    ],
+    "zero-shot and few-shot learning": [
+      "Models & Methods"
+    ],
+    "zero-shot code generation": [
+      "Models & Methods"
+    ],
+    "zero-shot learning": [
+      "Models & Methods"
+    ],
+    "zero-shot prompting": [
+      "Construction",
+      "Models & Methods"
+    ],
+    "zero-shot prompting for maintenance scenarios": [
+      "Construction",
+      "Maintenance",
+      "Models & Methods"
+    ],
+    "zero-shot prompts for vulnerability detection": [
+      "Construction",
+      "Models & Methods"
+    ]
+  }
+}

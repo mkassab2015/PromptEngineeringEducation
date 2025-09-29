@@ -1,0 +1,62 @@
+# ================================================
+# Upload cell (file upload widget) and loader
+# Expects an .xlsx with two columns:
+#   - course_description
+#   - prompt_techniques
+# Detects the first sheet automatically.
+# Prints summary and sample rows.
+# ================================================
+
+required_cols = ["course_description", "prompt_techniques"]
+
+def upload_excel():
+    if not IN_COLAB:
+        raise RuntimeError("This upload widget is intended for Google Colab.")
+    print("Please upload your .xlsx file with columns: 'course_description' and 'prompt_techniques'.")
+    uploaded = files.upload()
+    if not uploaded:
+        raise ValueError("No file uploaded.")
+    fname = list(uploaded.keys())[0]
+    return fname
+
+def read_first_sheet_xlsx(path):
+    xl = pd.ExcelFile(path)
+    sheet_name = xl.sheet_names[0]
+    df = xl.parse(sheet_name)
+    return df, sheet_name
+
+def concise_summary(df: pd.DataFrame, n=5):
+    print("\n=== Data Summary ===")
+    print(f"Rows: {len(df):,}")
+    avail_cols = list(df.columns)
+    print(f"Columns found: {avail_cols}")
+    # Non-empty counts
+    non_empty = df.notna().sum().sort_values(ascending=False)
+    print("\nNon-empty cells per column:")
+    print(non_empty)
+    print("\nSample rows:")
+    display(df.head(n))
+
+if IN_COLAB:
+    xlsx_path = upload_excel()
+else:
+    # Fallback for local testing: set your local path here.
+    xlsx_path = "/content/courses.xlsx"  # change if needed
+
+df_raw, first_sheet = read_first_sheet_xlsx(xlsx_path)
+print(f"Loaded first sheet: {first_sheet}")
+
+# Normalize column names to lowercase strip
+df_raw.columns = [str(c).strip().lower() for c in df_raw.columns]
+missing = [c for c in required_cols if c not in df_raw.columns]
+if missing:
+    raise ValueError(f"Missing required columns: {missing}. Found columns: {df_raw.columns.tolist()}")
+
+# Keep only required columns
+df = df_raw[required_cols].copy()
+
+# Coerce to string to avoid NaNs during concatenation
+for c in required_cols:
+    df[c] = df[c].astype(str).replace({"nan": ""}).fillna("")
+
+concise_summary(df)

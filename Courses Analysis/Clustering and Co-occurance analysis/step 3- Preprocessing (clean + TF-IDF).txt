@@ -1,0 +1,62 @@
+# ================================================
+# 1) Preprocessing (clean + TF-IDF)
+# - Build combined_text = course_description || prompt_techniques
+# - Clean text: lowercase, strip HTML, normalize whitespace, remove URLs & boilerplate
+# - TF-IDF with specified params; persist vectorizer in-session
+# ================================================
+
+import pickle
+import regex as re2  # 'regex' package for robust patterns
+
+BOILERPLATE_PATTERNS = [
+    r"\babout\s+this\s+course\b",
+    r"\blearning\s+objectives?\b",
+    r"\bwhat\s+you\s+will\s+learn\b",
+]
+
+URL_PATTERN = re2.compile(r"https?://\S+|www\.\S+", flags=re2.IGNORECASE)
+
+def strip_html(text: str) -> str:
+    # Remove HTML tags using BeautifulSoup
+    return BeautifulSoup(text or "", "html.parser").get_text(separator=" ")
+
+def clean_text(text: str) -> str:
+    if not isinstance(text, str):
+        text = "" if text is None else str(text)
+    text = text.lower()
+    text = strip_html(text)
+    text = URL_PATTERN.sub(" ", text)
+    # Remove boilerplate phrases
+    for pat in BOILERPLATE_PATTERNS:
+        text = re2.sub(pat, " ", text, flags=re2.IGNORECASE)
+    # Keep alphanumerics and essential punctuation .,;:!?/()&%+-_
+    text = re2.sub(r"[^a-z0-9\.\,\;\:\!\?\/\(\)\&\%\+\-\_\s]", " ", text)
+    # Normalize whitespace
+    text = re2.sub(r"\s+", " ", text).strip()
+    return text
+
+# Build combined text
+df["combined_text"] = (df["course_description"].fillna("").astype(str).str.strip() 
+                       + " || " + df["prompt_techniques"].fillna("").astype(str).str.strip())
+
+# Clean fields
+df["combined_text_clean"] = df["combined_text"].apply(clean_text)
+
+# Build TF-IDF
+tfidf = TfidfVectorizer(
+    ngram_range=(1, 2),
+    min_df=2,
+    max_df=0.9,
+    binary=False,
+    stop_words="english"
+)
+
+X = tfidf.fit_transform(df["combined_text_clean"])
+feature_names = np.array(tfidf.get_feature_names_out())
+
+# Persist vectorizer to session
+with open("/content/tfidf_vectorizer.pkl", "wb") as f:
+    pickle.dump(tfidf, f)
+
+print("TF-IDF matrix shape:", X.shape)
+print("Vectorizer saved to /content/tfidf_vectorizer.pkl")

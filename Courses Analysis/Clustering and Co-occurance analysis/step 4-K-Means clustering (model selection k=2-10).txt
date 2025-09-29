@@ -1,0 +1,118 @@
+# ================================================
+# 2) K-Means clustering (model selection: k=2..10)
+# - Metrics: Silhouette (cosine), Calinski–Harabasz, Davies–Bouldin
+# - Select best k with the rule:
+#     1) maximize silhouette
+#     2) then maximize Calinski–Harabasz
+#     3) then minimize Davies–Bouldin
+# - Refit final model and assign labels
+# ================================================
+
+from sklearn.metrics import pairwise_distances
+
+def model_selection_kmeans(X, k_min=2, k_max=10, random_state=RANDOM_STATE):
+    results = []
+    for k in range(k_min, k_max + 1):
+        km = KMeans(
+            n_clusters=k,
+            init="k-means++",
+            n_init="auto",
+            max_iter=500,
+            random_state=random_state
+        )
+        labels = km.fit_predict(X)
+        # Silhouette with cosine distance
+        try:
+            sil = silhouette_score(X, labels, metric="cosine")
+        except Exception:
+            sil = np.nan
+        # Calinski–Harabasz (computed in Euclidean TF-IDF space)
+        try:
+            ch = calinski_harabasz_score(X.toarray() if issparse(X) else X, labels)
+        except Exception:
+            ch = np.nan
+        # Davies–Bouldin (Euclidean)
+        try:
+            db = davies_bouldin_score(X.toarray() if issparse(X) else X, labels)
+        except Exception:
+            db = np.nan
+
+        results.append({
+            "k": k, "silhouette_cosine": sil,
+            "calinski_harabasz": ch, "davies_bouldin": db,
+            "model": km, "labels": labels
+        })
+        print(f"k={k:2d} | silhouette={sil:.4f} | calinski={ch:.2f} | davies_bouldin={db:.4f}")
+    return results
+
+results = model_selection_kmeans(X, 2, 10, RANDOM_STATE)
+
+# Build metrics table
+metrics_df = pd.DataFrame([{
+    "k": r["k"],
+    "silhouette_cosine": r["silhouette_cosine"],
+    "calinski_harabasz": r["calinski_harabasz"],
+    "davies_bouldin": r["davies_bouldin"],
+} for r in results]).sort_values("k").reset_index(drop=True)
+
+metrics_df.to_csv("/content/clustering_metrics.csv", index=False)
+print("\nSaved: /content/clustering_metrics.csv")
+display(metrics_df)
+
+# Plot metrics vs k (separate plots, no seaborn)
+fig, axes = plt.subplots(3, 1, figsize=(8, 12))
+axes = axes.flatten()
+
+axes[0].plot(metrics_df["k"], metrics_df["silhouette_cosine"], marker="o")
+axes[0].set_title("Silhouette (cosine) vs k")
+axes[0].set_xlabel("k")
+axes[0].set_ylabel("Silhouette (cosine)")
+axes[0].grid(True)
+
+axes[1].plot(metrics_df["k"], metrics_df["calinski_harabasz"], marker="o")
+axes[1].set_title("Calinski–Harabasz vs k")
+axes[1].set_xlabel("k")
+axes[1].set_ylabel("Calinski–Harabasz")
+axes[1].grid(True)
+
+axes[2].plot(metrics_df["k"], metrics_df["davies_bouldin"], marker="o")
+axes[2].set_title("Davies–Bouldin vs k")
+axes[2].set_xlabel("k")
+axes[2].set_ylabel("Davies–Bouldin (lower is better)")
+axes[2].grid(True)
+
+plt.tight_layout()
+plt.show()
+
+# Select best k according to rules
+def choose_best_k(results):
+    # Step 1: best silhouette (max)
+    max_sil = np.nanmax([r["silhouette_cosine"] for r in results])
+    sil_candidates = [r for r in results if r["silhouette_cosine"] == max_sil]
+
+    if len(sil_candidates) == 1:
+        return sil_candidates[0]
+    # Step 2: among candidates, best Calinski (max)
+    max_ch = np.nanmax([r["calinski_harabasz"] for r in sil_candidates])
+    ch_candidates = [r for r in sil_candidates if r["calinski_harabasz"] == max_ch]
+
+    if len(ch_candidates) == 1:
+        return ch_candidates[0]
+    # Step 3: among candidates, best Davies–Bouldin (min)
+    min_db = np.nanmin([r["davies_bouldin"] for r in ch_candidates])
+    db_candidates = [r for r in ch_candidates if r["davies_bouldin"] == min_db]
+
+    # If tie remains, choose the one with smallest k for parsimony
+    best = sorted(db_candidates, key=lambda r: r["k"])[0]
+    return best
+
+best = choose_best_k(results)
+best_k = best["k"]
+best_model = KMeans(
+    n_clusters=best_k, init="k-means++", n_init="auto",
+    max_iter=500, random_state=RANDOM_STATE
+).fit(X)
+labels_final = best_model.labels_
+
+print(f"\n=== Selected k* = {best_k} ===")
+print(f"Silhouette={best['silhouette_cosine']:.4f} | Calinski={best['calinski_harabasz']:.2f} | Davies–Bouldin={best['davies_bouldin']:.4f}")

@@ -1,0 +1,108 @@
+# ================================================
+# Clean single-color co-occurrence network
+# - One node color, neutral edges
+# - Degree-scaled nodes, weight-scaled edges
+# - Optional: keep only the giant component
+# - Labels: top hubs & bridges
+# - High-res PNG + vector PDF
+# ================================================
+
+from matplotlib.lines import Line2D
+
+def _normalize(values, eps=1e-9):
+    arr = np.array(list(values), dtype=float)
+    if arr.size == 0:
+        return np.array([])
+    lo, hi = arr.min(), arr.max()
+    if hi - lo < eps:
+        return np.ones_like(arr)
+    return (arr - lo) / (hi - lo + eps)
+
+def _short(s, maxlen=22):
+    return s if len(s) <= maxlen else (s[:maxlen-1] + "…")
+
+# Optionally keep only the largest connected component for a cleaner view
+H = G.copy()
+if len(H) > 0 and not nx.is_connected(H):
+    components = sorted(nx.connected_components(H), key=len, reverse=True)
+    giant = components[0]
+    H = H.subgraph(giant).copy()
+    print(f"Visualizing largest component only: {len(H.nodes())} nodes, {len(H.edges())} edges "
+          f"(from {len(G.nodes())} nodes, {len(G.edges())} edges total).")
+
+if len(H) == 0:
+    print("Graph empty (not enough co-occurrence).")
+else:
+    plt.figure(figsize=(10.5, 8.5))
+
+    # Layout: spring; k scaled by graph size for nicer spacing
+    k_val = 0.7 if len(H) < 80 else 0.9
+    pos = nx.spring_layout(H, seed=RANDOM_STATE, k=k_val, iterations=400)
+
+    # Edge widths/alphas scaled by co-occurrence weight
+    weights = np.array([H[u][v]['weight'] for u, v in H.edges()], dtype=float)
+    w_norm = _normalize(weights)
+    edge_widths = 0.6 + 2.6 * w_norm        # 0.6..3.2
+    edge_alphas = 0.15 + 0.65 * w_norm      # 0.15..0.80
+
+    # Draw edges in a loop to respect per-edge alpha
+    for (edge, ew, ea) in zip(H.edges(), edge_widths, edge_alphas):
+        nx.draw_networkx_edges(
+            H, pos, edgelist=[edge], width=ew, alpha=ea, edge_color="grey"
+        )
+
+    # Node size by degree (compressed dynamic range)
+    deg_H = dict(H.degree())
+    deg_arr = np.array([deg_H[n] for n in H.nodes()], dtype=float)
+    node_sizes = 220 + 120 * (deg_arr ** 0.8)
+
+    # Single-color nodes with white borders for contrast
+    nx.draw_networkx_nodes(
+        H, pos,
+        node_size=node_sizes,
+        node_color="#A7BED3",   # single soft blue; change to any single color if you prefer
+        edgecolors="white",
+        linewidths=0.8
+    )
+
+    # Labels: top hubs + top betweenness (union), capped for readability
+    # If H != G, recompute centralities on H
+    hubs_H = sorted(deg_H.items(), key=lambda x: x[1], reverse=True)[:8]
+    bet_H = nx.betweenness_centrality(H, weight=None, normalized=True)
+    bridges_H = sorted(bet_H.items(), key=lambda x: x[1], reverse=True)[:8]
+    label_set = set(n for n, _ in hubs_H) | set(n for n, _ in bridges_H)
+    labels = {n: _short(n) for n in H.nodes() if n in label_set}
+
+    nx.draw_networkx_labels(
+        H, pos, labels=labels, font_size=9, font_weight="bold",
+        bbox=dict(facecolor="white", edgecolor="none", alpha=0.7, boxstyle="round,pad=0.2")
+    )
+
+    # Minimal legend (proxy artists)
+    legend_handles = [
+        Line2D([0], [0], color='grey', lw=0.8, alpha=0.3, label='Low co-occurrence'),
+        Line2D([0], [0], color='grey', lw=3.0, alpha=0.8, label='High co-occurrence'),
+        Line2D([0], [0], marker='o', color='w',
+               markerfacecolor='#A7BED3', markersize=6,
+               label='Lower degree'),
+        Line2D([0], [0], marker='o', color='w',
+               markerfacecolor='#A7BED3', markersize=12,
+               label='Higher degree')
+    ]
+    plt.legend(handles=legend_handles, loc='upper left', frameon=True, fontsize=9)
+
+    plt.title("Prompt Techniques Co-occurrence Network (single-color, freq ≥ 2)")
+    plt.axis("off")
+    plt.tight_layout()
+    plt.savefig("/content/cooccurrence_network_clean.png", dpi=300)
+    plt.savefig("/content/cooccurrence_network_clean.pdf")
+    plt.show()
+
+    # Quick textual summary for the plotted subgraph
+    print("\n=== Plot Summary (single-color) ===")
+    print(f"- Nodes: {len(H.nodes())} | Edges: {len(H.edges())}")
+    print(f"- Top hubs (degree): {', '.join([n for n, _d in hubs_H])}")
+    print(f"- Top bridges (betweenness): {', '.join([n for n, _b in bridges_H])}")
+    print("Saved to:")
+    print(" - /content/cooccurrence_network_clean.png")
+    print(" - /content/cooccurrence_network_clean.pdf")

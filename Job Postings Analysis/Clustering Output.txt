@@ -1,0 +1,85 @@
+Prompts.xlsx(application/vnd.openxmlformats-officedocument.spreadsheetml.sheet) - 9556 bytes, last modified: 9/5/2025 - 100% done
+Saving Prompts.xlsx to Prompts (8).xlsx
+Loaded: Prompts (8).xlsx  shape=(69, 1)
+Using column: `prompt_techniques` | Kept 69 non-empty rows | Ignored 0 empty rows.
+TF-IDF shape: (69, 591)
+SVD components: 200 | cumulative explained variance: 1.000
+
+==================== MODEL SELECTION (K=2..10) ====================
+ K  silhouette_cosine  calinski_harabasz  davies_bouldin
+10           0.683051          23.106309        1.115094
+ 9           0.680054          23.094379        0.992475
+ 8           0.675978          23.844095        1.186299
+ 7           0.640461          22.188748        1.260402
+ 6           0.620422          23.652391        1.391011
+ 5           0.577080          22.245071        1.340379
+ 4           0.517858          21.711055        1.332461
+ 3           0.443449          22.272535        1.323009
+ 2           0.350688          23.728143        0.878076
+
+Selected K = 10  (Silhouette=0.683, CH=23.11, DB=1.115)
+
+==================== BEST MODEL CLUSTERS ====================
+Best K = 10
+
+Cluster 0  (size=13, avg_silhouette=0.692 if available)
+Name   : generation
+Meaning: This cluster focuses on generation, frequently mentioning: retrieval augmented, generation, augmented, augmented generation, retrieval, generation retrieval. Example: “rag, retrieval augmented generation, retrieval-augmented generation…”
+Top terms: retrieval augmented, generation, augmented, augmented generation, retrieval, generation retrieval, rag retrieval, atio, ation, ati
+Example: rag, retrieval augmented generation, retrieval-augmented generation…
+
+Cluster 1  (size=19, avg_silhouette=1.000 if available)
+Name   : rag
+Meaning: This cluster focuses on rag, frequently mentioning: rag, rag. Example: “rag…”
+Top terms: rag, rag
+Example: rag…
+
+Cluster 2  (size=9, avg_silhouette=0.546 if available)
+Name   : optimization
+Meaning: This cluster focuses on optimization, frequently mentioning: optimization, cost optimization, cost, optimization rag, prompt optimization, optimization techniques. Example: “cost optimization, rag…”
+Top terms: optimization, cost optimization, cost, optimization rag, prompt optimization, optimization techniques, techniques, zati,  op,  opti
+Example: cost optimization, rag…
+
+Cluster 3  (size=3, avg_silhouette=-0.054 if available)
+Name   : red teaming
+Meaning: This cluster focuses on red teaming, frequently mentioning: ail, red teaming, teaming, red, teaming safety, safety. Example: “red teaming, safety…”
+Top terms: ail, red teaming, teaming, red, teaming safety, safety, prompt injection, injection, jailbreak, red 
+Example: red teaming, safety…
+
+Cluster 4  (size=7, avg_silhouette=0.660 if available)
+Name   : refinement
+Meaning: This cluster focuses on refinement, frequently mentioning: refinement, rag refinement, refi, ref, refin, efine. Example: “refinement…”
+Top terms: refinement, rag refinement, refi, ref, refin, efine, eme, finem, efin, ement
+Example: refinement…
+
+Cluster 5  (size=4, avg_silhouette=0.255 if available)
+Name   : shot
+Meaning: This cluster focuses on shot, frequently mentioning: shot, zero, zero shot, icl, sho, hot. Example: “few-shot, icl, rag…”
+Top terms: shot, zero, zero shot, icl, sho, hot, -sho, shot, -shot, -sh
+Example: few-shot, icl, rag…
+
+Cluster 6  (size=2, avg_silhouette=0.182 if available)
+Name   : rag safety
+Meaning: This cluster focuses on rag safety, frequently mentioning: rag safety, safety, rag, tuning rag, ag s, ag sa. Example: “prompt tuning, rag, safety…”
+Top terms: rag safety, safety, rag, tuning rag, ag s, ag sa, rag s, prompt tuning, tuning, g sa
+Example: prompt tuning, rag, safety…
+
+Cluster 7  (size=3, avg_silhouette=0.815 if available)
+Name   : hallucination
+Meaning: This cluster focuses on hallucination, frequently mentioning: hallucination, hallucination rag, rag, nat, lucin, llu. Example: “hallucination, rag…”
+Top terms: hallucination, hallucination rag, rag, nat, lucin, llu, natio, nati, lluc, lluci
+Example: hallucination, rag…
+
+Cluster 8  (size=5, avg_silhouette=1.000 if available)
+Name   : safety
+Meaning: This cluster focuses on safety, frequently mentioning: safety, saf, safet, safe, fety, ety. Example: “safety…”
+Top terms: safety, saf, safet, safe, fety, ety, afe, fet, afet, afety
+Example: safety…
+
+Cluster 9  (size=4, avg_silhouette=0.234 if available)
+Name   : thought
+Meaning: This cluster focuses on thought, frequently mentioning: chain thought, chain, thought, thought cot, cot, safety. Example: “chain-of-thought, jailbreak, rag, safety…”
+Top terms: chain thought, chain, thought, thought cot, cot, safety, rag safety, shot, jailbreak, rag
+Example: chain-of-thought, jailbreak, rag, safety…
+
+Excel saved to: /content/prompt_engineer_kmeans_bestK_20250905_0852.xlsx

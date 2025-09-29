@@ -1,0 +1,152 @@
+# ===== One-Cell LDA with richer vocab + no K=1 winner =====
+# Upload -> vectorize (1-2 grams, relaxed pruning) -> LDA for K=2..10
+# Pick best K by UMass coherence (but enforce K>=2). Visualize & export.
+
+import io, re
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.decomposition import LatentDirichletAllocation
+from google.colab import files
+
+# ---------- USER CONFIG ----------
+TEXT_COL = "Clean Description"   # change if needed
+K_MIN, K_MAX = 2, 10             # <-- start at 2 so K=1 can't win
+TOP_N_WORDS = 12
+RANDOM_STATE = 42
+MIN_DF = 1                        # keep rarer terms
+MAX_DF = 0.95                     # allow more common terms
+MAX_FEATURES = 10000
+# ---------------------------------
+
+# 1) Upload file (CSV or Excel)
+uploaded = files.upload()
+fname = list(uploaded.keys())[0]
+if fname.lower().endswith(".csv"):
+    df = pd.read_csv(io.BytesIO(uploaded[fname]))
+else:
+    df = pd.read_excel(io.BytesIO(uploaded[fname]))
+assert TEXT_COL in df.columns, f"Column '{TEXT_COL}' not found."
+
+texts = df[TEXT_COL].fillna("").astype(str).tolist()
+
+def basic_clean(s: str):
+    s = s.lower()
+    s = re.sub(r"[^a-z\s]", " ", s)
+    s = re.sub(r"\s+", " ", s).strip()
+    return s
+
+texts = [basic_clean(t) for t in texts]
+idx_keep = [i for i,t in enumerate(texts) if t]
+if not idx_keep:
+    raise ValueError("All rows empty after cleaning. Check input.")
+texts = [texts[i] for i in idx_keep]
+df_model = df.iloc[idx_keep].reset_index(drop=True)
+
+# 2) Vectorize with unigrams + bigrams (keeps phrases)
+vectorizer = CountVectorizer(
+    stop_words="english",
+    ngram_range=(1,2),       # <-- key change: use bigrams
+    min_df=MIN_DF,
+    max_df=MAX_DF,
+    max_features=MAX_FEATURES
+)
+X = vectorizer.fit_transform(texts)
+vocab = np.array(vectorizer.get_feature_names_out())
+
+# Binary matrix for UMass coherence
+X_bin = (X > 0).astype(int)
+docfreq = np.asarray(X_bin.sum(axis=0)).ravel()
+cofreq = (X_bin.T @ X_bin).toarray()
+
+def umass_coherence(top_word_idxs):
+    if len(top_word_idxs) < 2:
+        return -np.inf
+    score = 0.0; pairs = 0
+    for i in range(1, len(top_word_idxs)):
+        wi = top_word_idxs[i]
+        for j in range(0, i):
+            wj = top_word_idxs[j]
+            dij = cofreq[wi, wj]
+            dj  = docfreq[wj]
+            score += np.log((dij + 1.0) / (dj + 1e-12))
+            pairs += 1
+    return score / max(pairs, 1)
+
+def topic_top_word_indices(components, n=10):
+    return np.argsort(-components, axis=1)[:, :n]
+
+# 3) Sweep K=2..10, compute UMass coherence
+k_vals, coh_vals, models, top_idxs_all = [], [], [], []
+for k in range(K_MIN, K_MAX+1):
+    lda = LatentDirichletAllocation(
+        n_components=k,
+        random_state=RANDOM_STATE,
+        learning_method="batch",
+        max_iter=50
+    )
+    lda.fit(X)
+    comps = lda.components_
+    top_idxs = topic_top_word_indices(comps, n=TOP_N_WORDS)
+    topic_cohs = [umass_coherence(ti.tolist()) for ti in top_idxs]
+    k_vals.append(k)
+    coh_vals.append(float(np.mean(topic_cohs)))
+    models.append(lda)
+    top_idxs_all.append(top_idxs)
+
+# 4) Choose best K by coherence (K>=2 by design)
+best_i = int(np.argmax(coh_vals))
+best_k = k_vals[best_i]
+best_model = models[best_i]
+best_top_idxs = top_idxs_all[best_i]
+best_coh = coh_vals[best_i]
+print(f"\nBest K = {best_k} with mean UMass coherence = {best_coh:.3f}")
+
+# 5) Show topics
+print("\n=== Top words per topic (best model) ===")
+topics_rows = []
+for t in range(best_k):
+    words = vocab[best_top_idxs[t]]
+    print(f"Topic {t}: " + ", ".join(words))
+    topics_rows.append({"topic": t, "top_words": ", ".join(words)})
+topics_df = pd.DataFrame(topics_rows)
+
+# 6) Topic prevalence
+doc_topic = best_model.transform(X)
+dominant = np.argmax(doc_topic, axis=1)
+counts = pd.Series(dominant).value_counts().sort_index()
+pct = (counts / len(dominant) * 100).round(1)
+assign_tbl = pd.DataFrame({"topic": counts.index, "count": counts.values, "percent": pct.values})
+print("\n=== Topic prevalence (best K) ===")
+print(assign_tbl)
+
+# 7) Visualizations
+# Coherence vs K
+plt.figure(figsize=(6,4))
+plt.plot(k_vals, coh_vals, marker="o")
+plt.title("UMass Coherence vs Number of Topics")
+plt.xlabel("Number of Topics (K)")
+plt.ylabel("Mean UMass Coherence")
+plt.grid(True, linestyle="--", alpha=0.5)
+plt.show()
+
+# Topic prevalence bar
+plt.figure(figsize=(6,4))
+plt.bar(assign_tbl["topic"].astype(str), assign_tbl["percent"])
+plt.title(f"Topic Prevalence (K={best_k})")
+plt.xlabel("Topic")
+plt.ylabel("Percent of Documents")
+plt.grid(axis="y", linestyle="--", alpha=0.5)
+plt.show()
+
+# 8) Save outputs
+topics_df.to_csv("lda_topics_best.csv", index=False)
+doc_assign_df = pd.DataFrame({"doc_index": df_model.index, "dominant_topic": dominant})
+for t in range(best_k):
+    doc_assign_df[f"topic_{t}_prob"] = doc_topic[:, t]
+doc_assign_df.to_csv("lda_doc_topics_best.csv", index=False)
+from google.colab import files
+print("\nSaved: lda_topics_best.csv, lda_doc_topics_best.csv")
+files.download("lda_topics_best.csv")
+files.download("lda_doc_topics_best.csv")

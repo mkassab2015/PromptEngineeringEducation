@@ -1,0 +1,436 @@
+# %% [markdown]
+# # Prompt-Engineering Job Descriptions → Structured Excel
+#
+# **Pipeline steps:**
+# 1. Prompt user to upload dataset (CSV, Excel, or JSON).
+# 2. Detect language and translate non-English to English.
+# 3. Clean and normalize job descriptions.
+# 4. Extract:
+#    - Technical Skills (languages, ML frameworks, cloud)
+#    - Soft Skills
+#    - Prompt Engineering Techniques
+#    - Software Engineering Knowledge Areas
+#    - Tools & Libraries
+#    - Task Types
+#    - SE Lifecycle Phases (SWEBOK-aligned)
+#    - Role Seniority
+#    - Industry Domain
+#    - Education (normalized to bachelor/master/phd + highest level)
+#    - Certificates
+#    - Years of Experience
+# 5. Save results into Excel with summary sheets (including education_normalized).
+
+# %%
+!pip -q install pandas openpyxl deep-translator unidecode langdetect rapidfuzz
+
+# %%
+import os, re, time
+import pandas as pd
+from collections import defaultdict
+from langdetect import detect, DetectorFactory
+from deep_translator import GoogleTranslator
+from unidecode import unidecode
+from rapidfuzz import fuzz
+from google.colab import files
+
+DetectorFactory.seed = 42
+
+# -----------------------------
+# UPLOAD FILE
+# -----------------------------
+print("📂 Please upload your job description dataset (CSV, Excel, or JSON)...")
+uploaded = files.upload()
+INPUT_PATH = list(uploaded.keys())[0]
+OUTPUT_PATH = '/content/prompt_jobs_cleaned.xlsx'
+
+# -----------------------------
+# BASIC CONFIG
+# -----------------------------
+ID_COL = 'id'
+TITLE_COL = 'title'
+COMPANY_COL = 'company'
+DESC_COL = 'Description'   # REQUIRED
+INDUSTRY_COL = 'industry'
+LOCATION_COL = 'location'
+
+TRANSLATE = True
+TRANSLATION_TARGET_LANG = 'en'
+BATCH_SLEEP_SEC = 0.7
+FUZZY_THRESHOLD = 88
+
+# -----------------------------
+# LEXICONS (extend as needed)
+# -----------------------------
+LEX = {
+    "programming_languages": [
+        "python","java","javascript","typescript",
+        "c++","c#","objective-c","swift",
+        "go ","golang","rust","kotlin","scala",
+        "ruby","perl","php","r ","matlab","sas",
+        "fortran","cobol","ada","pascal","haskell",
+        "ocaml","erlang","elixir","clojure","f#","julia","groovy","shell","bash","powershell",
+        "sql","pl/sql","t-sql","mysql","postgresql",
+        "visual basic","vb.net","assembly","verilog","vhdl",
+        "dart","solidity","vba","scratch"
+    ],
+
+    "ml_frameworks": [
+        # Core deep learning
+        "pytorch","torch","tensorflow","keras","jax","flax","theano","cntk","mxnet","chainer",
+
+        # Classic ML & scientific
+        "scikit-learn","sklearn","xgboost","lightgbm","catboost","h2o.ai","mllib",
+
+        # Probabilistic / Bayesian
+        "stan ","pymc","pymc3","pymc4","edward","tensorflow probability","infer.net",
+
+        # Distributed ML / MLOps
+        "ray ","horovod","deepspeed","accelerate","parameter server","petastorm","mlflow","kubeflow",
+
+        # Model serving / optimization
+        "onnx","onnxruntime","tensorrt","openvino","torchserve","tf-serving",
+
+        # Large-scale training / LLM-specific
+        "transformers","huggingface transformers","trl","trlx","trlhf","alpaca","peft","loralib","bitsandbytes",
+
+        # Specialized domains
+        "fastai","lightning","paddlepaddle","mindspore","bigdl","modular",
+
+        # Reinforcement Learning
+        "rllib","stable-baselines","stable-baselines3","dopamine","acme",
+
+        # Graph ML
+        "pyg","pytorch geometric","dgl","deep graph library","graph-tool",
+
+        # NLP-specific
+        "spacy","nltk","gensim","flair","stanza","allennlp",
+
+        # Vision-specific
+        "detectron","detectron2","mmcv","mmdetection","yolo","yolov5","yolov7","yolov8","openmmlab",
+
+        # Audio & speech
+        "espnet","speechbrain","fairseq","kaldi",
+
+        # Other emerging
+        "diffusers","stable diffusion","controlnet","lora","dreambooth","comfyui"
+    ],
+
+    "cloud_platforms": ["aws","azure","gcp","vertex ai","sagemaker","kubernetes","docker"],
+    "soft_skills": ["communication","teamwork","problem-solving","leadership","adaptability"],
+
+    "prompt_techniques": [
+        "zero-shot","zeroshot",
+        "few-shot","fewshot",
+        "one-shot","oneshot",
+        "chain-of-thought","chain of thought","cot",
+        "tree-of-thought","tree of thought",
+        "self-consistency","self consistency",
+        "self-reflection","self reflection",
+        "scratchpad","rationale-augmented",
+        "toolformer","auto-prompting","meta-prompt","meta prompting",
+        "in-context learning","icl","prompt tuning","soft prompts","prefix tuning",
+        "retrieval-augmented generation","rag","retrieval augmented generation","reranking","guardrails",
+        "prompt injection","jailbreak","safety","red teaming",
+        "hallucination","hallucination mitigation","hallucination handling","hallucination reduction",
+        "prompt refinement","refinement","iterative refinement",
+        "prompt optimization","optimization techniques","efficiency optimization","latency optimization","cost optimization",
+        "evaluation harness","debiasing prompts",
+        "context distillation","multi-step prompting","deliberate decoding",
+        "active prompting","automatic prompt search","few-shot calibration"
+    ],
+
+    "se_knowledge": ["requirements","architecture","design patterns","uml","testing","devops","ci/cd","deployment"],
+
+    "tools_libraries": [
+        # LLM & Prompt Engineering Frameworks
+        "langchain","langgraph","llamaindex","haystack","guidance","guardrails",
+        "griptape","autogen","semantic kernel","dspy","crewAI","chroma","llama.cpp",
+
+        # Hugging Face Ecosystem
+        "huggingface","transformers","datasets","diffusers","trl","accelerate",
+
+        # Serving / Deployment
+        "docker","kubernetes","helm","fastapi","flask","django","streamlit","gradio",
+        "ray serve","torchserve","onnxruntime","tensorrt","openvino",
+
+        # MLOps & Experiment Tracking
+        "mlflow","wandb","dvc","clearml","neptune.ai","comet.ml","weights and biases",
+
+        # Vector DBs / Retrieval
+        "pinecone","weaviate","milvus","qdrant","faiss","vespa","elastic","opensearch","redis","postgres vector",
+
+        # Cloud AI Tools
+        "aws sagemaker","aws bedrock","vertex ai","azure openai","gcp ai platform",
+
+        # Agents & Chatbot Frameworks
+        "rasa","botpress","dialogflow","microsoft bot framework","alexa skills kit",
+
+        # Testing / Monitoring
+        "great expectations","evidently ai","whylogs","deepchecks","fiddler","arize",
+
+        # Data / Preprocessing
+        "pandas","numpy","scipy","nltk","spacy","gensim","openai","anthropic","cohere","gpt","claude","gemini","llama","llama2",
+
+        # UI / Visualization
+        "plotly","matplotlib","seaborn","powerbi","tableau"
+    ],
+
+    "task_types": [
+        # Core model adaptation
+        "fine-tuning","finetuning","fine tuning","pretraining","pre-training",
+        "domain adaptation","transfer learning","continual learning",
+
+        # Prompt & LLM evaluation
+        "evaluation","model evaluation","benchmarking","a/b testing",
+        "red teaming","adversarial testing","safety evaluation","guardrail design",
+        "bias evaluation","fairness testing","hallucination detection","robustness testing",
+
+        # Prompt design & management
+        "prompt engineering","prompt design","prompt refinement","prompt optimization",
+        "prompt catalog","prompt library","prompt management","automatic prompt search",
+
+        # Application development
+        "build chatbot","chatbot","assistant","agent","multi-agent","autonomous agent",
+        "retrieval pipeline","rag pipeline","qa system","recommendation system","personalization system",
+
+        # Data curation & prep
+        "data labeling","data annotation","data cleaning","data preprocessing",
+        "dataset creation","dataset augmentation","synthetic data generation",
+
+        # Deployment & ops
+        "deployment","model serving","productionization","monitoring","logging","observability",
+        "latency optimization","cost optimization","scalability tuning",
+
+        # Integration & APIs
+        "api integration","tool integration","plugin development","workflow automation",
+
+        # Security & reliability
+        "jailbreak mitigation","prompt injection defense","safety hardening","compliance checking",
+
+        # Research-oriented
+        "rlhf","reinforcement learning with human feedback","alignment research",
+        "meta-prompting","active prompting","evaluation harness","prototype building"
+    ],
+
+    "lifecycle_phases": ["requirements","architecture","design","construction","testing","maintenance","deployment"],
+
+    "seniority_markers": {
+        "junior": ["junior","entry"],
+        "senior": ["senior","staff"],
+        "lead": ["lead","principal","manager","director"],
+        "intern": ["intern"]
+    },
+
+    "education": [
+        # Undergraduate
+        "bachelor","bachelors","bachelor's","undergraduate",
+        "b.s.","b.sc","b.sc.","b.a.",
+
+        # Graduate (Masters)
+        "master","masters","master's","graduate","m.s.","m.sc.","m.a.","m.eng","mba",
+
+        # Doctoral
+        "phd","ph.d.","doctorate","doctoral degree",
+
+        # Certificates & Diplomas
+        "postgraduate diploma","graduate diploma","post-baccalaureate",
+        "associate degree","a.s.","community college",
+
+        # Vocational / Other
+        "technical diploma","trade school","certificate program"
+    ],
+
+    "certificates": ["aws certified","azure certification","scrum master","cka","pmp"],
+    "industry_domains": ["technology","finance","healthcare","education","retail","government"]
+}
+
+YEARS_PATTERNS = [
+    r"(\d{1,2})\+?\s*(?:years|yrs)\s+of\s+experience",
+    r"(\d{1,2})\+?\s*(?:years|yrs)\s+experience",
+    r"minimum\s+(\d{1,2})\s*(?:years|yrs)"
+]
+
+# -----------------------------
+# EDUCATION NORMALIZATION
+# -----------------------------
+EDU_NORMALIZATION = {
+    "bachelor": {
+        "bachelor","bachelors","bachelor's","undergraduate",
+        "bs","b.s.","b.sc","b.sc.","ba","b.a.","ab"
+    },
+    "master": {
+        "master","masters","master's","graduate",
+        "ms","m.s.","msc","m.sc.","ma","m.a.","meng","m.eng","mba","m.b.a."
+    },
+    "phd": {
+        "phd","ph.d.","doctorate","doctoral degree","dphil","edd"
+    }
+}
+EDU_ORDER = {"bachelor": 1, "master": 2, "phd": 3}
+
+# -----------------------------
+# HELPERS
+# -----------------------------
+def safe_lower(txt):
+    return unidecode(str(txt)).lower()
+
+def detect_lang(text):
+    try:
+        return detect(text)
+    except:
+        return "en"
+
+def translate_to_en(text):
+    if not TRANSLATE:
+        return text
+    lang = detect_lang(text)
+    if lang == "en":
+        return text
+    try:
+        out = GoogleTranslator(source="auto", target=TRANSLATION_TARGET_LANG).translate(text)
+        time.sleep(BATCH_SLEEP_SEC)
+        return out
+    except:
+        return text
+
+def clean_text(text):
+    return re.sub(r"\s+"," ",str(text).replace("\n"," ")).strip()
+
+def fuzzy_find_all(text, candidates):
+    found = set()
+    for c in candidates:
+        if c in text or fuzz.partial_ratio(c, text) >= FUZZY_THRESHOLD:
+            found.add(c)
+    return found
+
+def regex_years_experience(text):
+    years = []
+    for pat in YEARS_PATTERNS:
+        for m in re.finditer(pat, text):
+            try:
+                years.append(int(m.group(1)))
+            except:
+                pass
+    return max(years) if years else None
+
+def infer_seniority(text):
+    for level, markers in LEX["seniority_markers"].items():
+        for m in markers:
+            if m in text:
+                return level
+    return None
+
+def normalize_education(raw_matches: set) -> set:
+    raw = {x.strip().lower() for x in raw_matches}
+    out = set()
+    for canon, variants in EDU_NORMALIZATION.items():
+        if raw & variants:
+            out.add(canon)
+    return out
+
+def highest_education_level(normed: set):
+    if not normed:
+        return ""
+    return max(normed, key=lambda k: EDU_ORDER.get(k, 0))
+
+# -----------------------------
+# LOAD DATA
+# -----------------------------
+ext = os.path.splitext(INPUT_PATH)[1].lower()
+if ext == ".csv":
+    df = pd.read_csv(INPUT_PATH)
+elif ext in [".xlsx",".xls"]:
+    df = pd.read_excel(INPUT_PATH)
+elif ext in [".json",".jsonl"]:
+    try:
+        df = pd.read_json(INPUT_PATH, lines=True)
+    except ValueError:
+        df = pd.read_json(INPUT_PATH)
+else:
+    raise ValueError("Unsupported file type.")
+
+if ID_COL not in df.columns:
+    df[ID_COL] = range(1, len(df)+1)
+for col in [TITLE_COL, COMPANY_COL, DESC_COL, INDUSTRY_COL, LOCATION_COL]:
+    if col in df.columns:
+        df[col] = df[col].fillna("").astype(str)
+
+# -----------------------------
+# TRANSLATE + CLEAN
+# -----------------------------
+records = []
+for _, row in df.iterrows():
+    desc_raw = row[DESC_COL]
+    desc_en = clean_text(translate_to_en(desc_raw))
+    records.append({
+        ID_COL: row[ID_COL],
+        "title": row.get(TITLE_COL, ""),
+        "company": row.get(COMPANY_COL, ""),
+        "description_clean_en": desc_en,
+        "language_detected": detect_lang(desc_raw)
+    })
+clean_df = pd.DataFrame(records)
+
+# -----------------------------
+# EXTRACTION
+# -----------------------------
+extracted = []
+for _, r in clean_df.iterrows():
+    text = safe_lower(r["description_clean_en"])
+    row = {
+        ID_COL: r[ID_COL],
+        "title": r["title"],
+        "company": r["company"],
+        "language_detected": r["language_detected"],
+        "description_clean_en": r["description_clean_en"],
+        "years_experience": regex_years_experience(text),
+        "seniority_inferred": infer_seniority((text or "") + " " + safe_lower(r["title"]))
+    }
+
+    # Keep existing behavior for all keys except education
+    for key in ["programming_languages","ml_frameworks","cloud_platforms","soft_skills",
+                "prompt_techniques","se_knowledge","tools_libraries","task_types",
+                "lifecycle_phases","certificates","industry_domains"]:
+        row[key] = ", ".join(sorted(fuzzy_find_all(text, LEX[key])))
+
+    # Education: raw + normalized + highest level
+    edu_raw_matches = fuzzy_find_all(text, LEX["education"])
+    row["education"] = ", ".join(sorted(edu_raw_matches))
+    edu_normed = normalize_education(edu_raw_matches)
+    row["education_normalized"] = ", ".join(sorted(edu_normed))
+    row["highest_education_level"] = highest_education_level(edu_normed)
+
+    extracted.append(row)
+
+ex_df = pd.DataFrame(extracted)
+
+# -----------------------------
+# SUMMARY SHEETS
+# -----------------------------
+def count_items(series):
+    cnt = defaultdict(int)
+    for cell in series.dropna():
+        for item in [x.strip() for x in str(cell).split(",") if x.strip()]:
+            cnt[item] += 1
+    return pd.DataFrame(cnt.items(), columns=["item","count"]).sort_values("count", ascending=False)
+
+summaries = {
+    col: count_items(ex_df[col]) for col in [
+        "programming_languages","ml_frameworks","cloud_platforms","soft_skills",
+        "prompt_techniques","se_knowledge","tools_libraries","task_types","lifecycle_phases"
+    ]
+}
+# Add normalized education summary
+summaries["education_normalized"] = count_items(ex_df["education_normalized"])
+
+# -----------------------------
+# WRITE TO EXCEL
+# -----------------------------
+with pd.ExcelWriter(OUTPUT_PATH, engine="openpyxl") as writer:
+    clean_df.to_excel(writer, index=False, sheet_name="cleaned")
+    ex_df.to_excel(writer, index=False, sheet_name="extracted")
+    for name, dfc in summaries.items():
+        dfc.to_excel(writer, index=False, sheet_name=f"summary_{name[:25]}")
+
+print(f"✅ Saved results to: {OUTPUT_PATH}")
+files.download(OUTPUT_PATH)

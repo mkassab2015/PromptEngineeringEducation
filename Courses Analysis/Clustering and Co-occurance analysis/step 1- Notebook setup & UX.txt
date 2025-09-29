@@ -1,0 +1,44 @@
+# ================================================
+# 0) Notebook setup & UX
+# Works end-to-end in Google Colab
+# ================================================
+
+# If running in Colab, uncomment the next line to install missing packages.
+# (Matplotlib, numpy, pandas, scikit-learn, networkx, scipy, bs4 are usually available.)
+# You can safely re-run this cell.
+!pip -q install networkx==3.2.1 beautifulsoup4==4.12.3
+
+import io
+import re
+import sys
+import math
+import json
+import itertools
+import warnings
+warnings.filterwarnings("ignore")
+
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+
+from bs4 import BeautifulSoup
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.cluster import KMeans
+from sklearn.decomposition import TruncatedSVD
+from sklearn.metrics import silhouette_score, calinski_harabasz_score, davies_bouldin_score
+from sklearn.preprocessing import normalize
+from scipy.sparse import issparse
+import networkx as nx
+
+# Colab upload helper
+try:
+    from google.colab import files  # type: ignore
+    IN_COLAB = True
+except Exception:
+    IN_COLAB = False
+
+RANDOM_STATE = 42
+np.random.seed(RANDOM_STATE)
+
+print(f"Running in Colab: {IN_COLAB}")
+print("Setup complete.")

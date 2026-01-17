@@ -68,6 +68,6 @@ The goal is to **triangulate industry demand (patents, jobs) with academic suppl
 ---
 
 ## 📌 Notes
-- **Data sources:** Lens.org (patents), scraped job postings, and university course catalogs  
+- **Data sources:** Lens.org (patents), job postings extracted from LinkedIn (June–July 2025) from all countries ranked among the top 50 economies in the WIPO Global'24, and university course catalogs  
 - Ensure proper environment setup for Python scripts (`scikit-learn`, `pandas`, `matplotlib`)  
 - Large artifacts (video, PNGs) illustrate intermediate and final results  
